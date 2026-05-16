@@ -1,15 +1,5 @@
-﻿{
+{
   "version": 2,
-  "builds": [
-    {
-      "src": "index.php",
-      "use": "@vercel/php"
-    },
-    {
-      "src": "assets/**",
-      "use": "@vercel/static"
-    }
-  ],
   "routes": [
     {
       "src": "/assets/(.*)",
@@ -17,7 +7,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/index.php"
+      "dest": "/index.html"
     }
   ]
 }

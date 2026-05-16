@@ -2288,7 +2288,11 @@ body.booking-modal-open {
 }
 
 .css-filter-panel {
-    max-width: 760px;
+    max-width: 830px;
+}
+
+.css-filter-panel .search-container {
+    margin-bottom: 14px;
 }
 
 .destination-filter-shell .filter-btn {
@@ -2305,21 +2309,35 @@ body.booking-modal-open {
     border-color: var(--green);
     background: var(--green);
     color: var(--white);
+    box-shadow: 0 12px 26px rgba(15, 107, 69, 0.16);
 }
 
-#destinationExpand:not(:checked) ~ .destination-card-grid .trip-card:nth-of-type(n+5) {
-    display: none;
+.destination-card-grid .trip-card {
+    display: block !important;
 }
 
-#filter-hardcore:checked ~ .destination-card-grid .trip-card,
-#filter-chill:checked ~ .destination-card-grid .trip-card,
-#filter-golden:checked ~ .destination-card-grid .trip-card {
-    display: none;
+#filter-all:checked ~ #destinationExpand:not(:checked) ~ .destination-card-grid .trip-card:nth-of-type(n+5) {
+    display: none !important;
 }
 
-#filter-hardcore:checked ~ .destination-card-grid .trip-card.vibe-hardcore,`r`n#filter-chill:checked ~ .destination-card-grid .trip-card.vibe-chill,`r`n#filter-golden:checked ~ .destination-card-grid .trip-card.vibe-golden,`r`n#filter-all:checked ~ #destinationExpand:checked ~ .destination-card-grid .trip-card {
-    display: block;
+#filter-hardcore:checked ~ .destination-card-grid .trip-card:not(.vibe-hardcore),
+#filter-chill:checked ~ .destination-card-grid .trip-card:not(.vibe-chill),
+#filter-golden:checked ~ .destination-card-grid .trip-card:not(.vibe-golden) {
+    display: none !important;
+}
+
+#filter-hardcore:checked ~ .destination-card-grid .trip-card.vibe-hardcore,
+#filter-chill:checked ~ .destination-card-grid .trip-card.vibe-chill,
+#filter-golden:checked ~ .destination-card-grid .trip-card.vibe-golden,
+#filter-all:checked ~ #destinationExpand:checked ~ .destination-card-grid .trip-card {
+    display: block !important;
     animation: destinationReveal 0.32s ease both;
+}
+
+#filter-hardcore:checked ~ .destination-action,
+#filter-chill:checked ~ .destination-action,
+#filter-golden:checked ~ .destination-action {
+    display: none;
 }
 
 .destination-action .toggle-label-less {
@@ -2332,6 +2350,10 @@ body.booking-modal-open {
 
 #destinationExpand:checked ~ .destination-action .toggle-label-less {
     display: inline;
+}
+
+.btn-destination-toggle {
+    user-select: none;
 }
 
 @keyframes destinationReveal {
@@ -2407,4 +2429,3 @@ body.booking-modal-open {
         gap: 18px;
     }
 }
-

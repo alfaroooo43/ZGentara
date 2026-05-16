@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZGentara Trip</title>
     <link rel="icon" type="image/png" href="assets/icons/LogoZGentara.png">
-    <link rel="stylesheet" href="assets/css/style.css?v=20260521">
+    <link rel="stylesheet" href="assets/css/style.css?v=20260523">
 </head>
 <body>
 
@@ -111,14 +111,18 @@
         <input type="radio" name="destination-filter" id="filter-golden" class="destination-filter-toggle">
         <input type="checkbox" id="destinationExpand" class="destination-expand-toggle">
 
-        <div class="search-filter-form css-filter-panel" aria-label="Filter destinasi tanpa JavaScript">
+        <form action="#jastrip" method="get" class="search-filter-form css-filter-panel" aria-label="Filter destinasi tanpa JavaScript">
+            <div class="search-container">
+                <input type="search" name="search" class="search-input" placeholder="Cari destinasi, contoh: Raung, Ijen, Wurung..." aria-label="Cari destinasi">
+                <button type="submit" class="btn-search-submit">Cari</button>
+            </div>
             <div class="filter-container">
                 <label for="filter-all" class="filter-btn filter-all-label">Semua Vibe</label>
                 <label for="filter-hardcore" class="filter-btn filter-hardcore-label">Hardcore Adventure</label>
                 <label for="filter-chill" class="filter-btn filter-chill-label">Chill &amp; Healing</label>
                 <label for="filter-golden" class="filter-btn filter-golden-label">Golden Hour Spot</label>
             </div>
-        </div>
+        </form>
 
         <div class="card-grid destination-card-grid">
             <article class="card trip-card vibe-hardcore">

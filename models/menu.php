@@ -50,7 +50,7 @@ class Menu {
             [
                 'nama' => 'Kawah Ijen',
                 'vibe' => 'Golden Hour Spot',
-                'foto' => 'KawahIjen.png',
+                'foto' => 'BlueFireIjenBondowoso.png',
                 'deskripsi' => 'Mengejar fenomena magis Blue Fire dan kehangatan sunrise terindah.'
             ],
             [
@@ -62,7 +62,7 @@ class Menu {
             [
                 'nama' => 'Bukit Megasari',
                 'vibe' => 'Golden Hour Spot',
-                'foto' => 'BukitParalayangMegasari.png',
+                'foto' => 'BukitMegasariParalayang.png',
                 'deskripsi' => 'Spot terbaik menikmati pemandangan lanskap Bondowoso dari ketinggian saat senja.'
             ]
         ];

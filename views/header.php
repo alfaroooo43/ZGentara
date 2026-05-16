@@ -8,6 +8,11 @@ $assetBase = $data['asset_base'] ?? '../assets';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= htmlspecialchars($pageTitle); ?></title>
+    <meta property="og:title" content="ZGentara Trip | Jelajahi Keindahan Indonesia">
+    <meta property="og:description" content="Website travel premium untuk booking wisata alam, open trip, healing, dan adventure terbaik di Indonesia bersama ZGentara Trip.">
+    <meta property="og:image" content="https://zgentara.vercel.app/assets/images/BagroundHeader.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zgentara.vercel.app/">
     <link rel="icon" type="image/png" href="<?= htmlspecialchars($assetBase); ?>/icons/LogoZGentara.png">
     <link rel="stylesheet" href="<?= htmlspecialchars($assetBase); ?>/css/style.css?v=20260524">
 </head>

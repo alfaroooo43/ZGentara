@@ -98,263 +98,196 @@
 </section>
 
 <section id="jastrip" class="section-container destination-section">
-    <div class="section-shell">
+    <div class="section-shell destination-filter-shell">
         <div class="section-header">
             <span class="leaf-icon"><img src="assets/icons/LogoZGentara.png" alt=""></span>
             <h2 class="title-line">DESTINASI POPULER</h2>
         </div>
 
-        <form action="#jastrip" method="GET" class="search-filter-form">
-            <div class="search-container">
-                <input type="text" name="search" class="search-input" placeholder="Ketik pencarian (misal: Raung, Kopi)..." value="">
-                <button type="submit" class="btn-search-submit">Cari</button>
-            </div>
+        <input type="radio" name="destination-filter" id="filter-all" class="destination-filter-toggle" checked>
+        <input type="radio" name="destination-filter" id="filter-hardcore" class="destination-filter-toggle">
+        <input type="radio" name="destination-filter" id="filter-chill" class="destination-filter-toggle">
+        <input type="radio" name="destination-filter" id="filter-golden" class="destination-filter-toggle">
+        <input type="checkbox" id="destinationExpand" class="destination-expand-toggle">
 
+        <div class="search-filter-form css-filter-panel" aria-label="Filter destinasi tanpa JavaScript">
             <div class="filter-container">
-                <button type="submit" name="vibe" value="all" class="filter-btn active">Semua Vibe</button>
-                <button type="submit" name="vibe" value="Hardcore Adventure" class="filter-btn ">Hardcore Adventure</button>
-                <button type="submit" name="vibe" value="Chill & Healing" class="filter-btn ">Chill & Healing</button>
-                <button type="submit" name="vibe" value="Golden Hour Spot" class="filter-btn ">Golden Hour Spot</button>
+                <label for="filter-all" class="filter-btn filter-all-label">Semua Vibe</label>
+                <label for="filter-hardcore" class="filter-btn filter-hardcore-label">Hardcore Adventure</label>
+                <label for="filter-chill" class="filter-btn filter-chill-label">Chill &amp; Healing</label>
+                <label for="filter-golden" class="filter-btn filter-golden-label">Golden Hour Spot</label>
             </div>
-        </form>
+        </div>
 
-        <div class="card-grid">
-                                                                    <article class="card trip-card booking-trip-trigger" tabindex="0" role="button" aria-label="Booking Gunung Raung" data-trip="Gunung Raung" data-image="assets/images/GunungRaung.png">
-                        <div class="card-img">
-                            <img src="assets/images/GunungRaung.png" alt="Gunung Raung">
-                        </div>
-                        <div class="card-content">
-                            <span class="vibe-tag">Hardcore Adventure</span>
-                            <h3>Gunung Raung</h3>
-                            <p>Jalur pendakian ekstrem yang menantang fisik dan mental demi puncak sejati.</p>
-                            <div class="card-bottom">
-                                <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                                <span class="rating-num">4.9</span>
-                                <span class="card-booking-chip">Booking</span>
-                            </div>
-                        </div>
-                    </article>
-                                                        <article class="card trip-card booking-trip-trigger" tabindex="0" role="button" aria-label="Booking Gunung Piramida" data-trip="Gunung Piramida" data-image="assets/images/GunungPiramidaBondowoso.png">
-                        <div class="card-img">
-                            <img src="assets/images/GunungPiramidaBondowoso.png" alt="Gunung Piramida">
-                        </div>
-                        <div class="card-content">
-                            <span class="vibe-tag">Hardcore Adventure</span>
-                            <h3>Gunung Piramida</h3>
-                            <p>Puncak ikonik dengan jalur punggungan tipis yang memacu adrenalin.</p>
-                            <div class="card-bottom">
-                                <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                                <span class="rating-num">4.9</span>
-                                <span class="card-booking-chip">Booking</span>
-                            </div>
-                        </div>
-                    </article>
-                                                        <article class="card trip-card booking-trip-trigger" tabindex="0" role="button" aria-label="Booking Gunung Rante" data-trip="Gunung Rante" data-image="assets/images/GunungRante.png">
-                        <div class="card-img">
-                            <img src="assets/images/GunungRante.png" alt="Gunung Rante">
-                        </div>
-                        <div class="card-content">
-                            <span class="vibe-tag">Hardcore Adventure</span>
-                            <h3>Gunung Rante</h3>
-                            <p>Tantangan tanjakan berpasir dengan panorama kaldera yang memukau.</p>
-                            <div class="card-bottom">
-                                <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                                <span class="rating-num">4.9</span>
-                                <span class="card-booking-chip">Booking</span>
-                            </div>
-                        </div>
-                    </article>
-                                                        <article class="card trip-card booking-trip-trigger" tabindex="0" role="button" aria-label="Booking Kawah Wurung" data-trip="Kawah Wurung" data-image="assets/images/KawahWurung.png">
-                        <div class="card-img">
-                            <img src="assets/images/KawahWurung.png" alt="Kawah Wurung">
-                        </div>
-                        <div class="card-content">
-                            <span class="vibe-tag">Chill &amp; Healing</span>
-                            <h3>Kawah Wurung</h3>
-                            <p>Hamparan sabana hijau nan sejuk, sangat pas untuk bersantai menyeduh kopi.</p>
-                            <div class="card-bottom">
-                                <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                                <span class="rating-num">4.9</span>
-                                <span class="card-booking-chip">Booking</span>
-                            </div>
-                        </div>
-                    </article>
-                                    </div>
+        <div class="card-grid destination-card-grid">
+            <article class="card trip-card vibe-hardcore">
+                <div class="card-img"><img src="assets/images/GunungRaung.png" alt="Gunung Raung"></div>
+                <div class="card-content">
+                    <span class="vibe-tag">Hardcore Adventure</span>
+                    <h3>Gunung Raung</h3>
+                    <p>Jalur pendakian ekstrem yang menantang fisik dan mental demi puncak sejati.</p>
+                    <div class="card-bottom"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="rating-num">4.9</span><a href="#booking-trip" class="card-booking-chip">Booking</a></div>
+                </div>
+            </article>
+            <article class="card trip-card vibe-hardcore">
+                <div class="card-img"><img src="assets/images/GunungPiramidaBondowoso.png" alt="Gunung Piramida"></div>
+                <div class="card-content">
+                    <span class="vibe-tag">Hardcore Adventure</span>
+                    <h3>Gunung Piramida</h3>
+                    <p>Puncak ikonik dengan jalur punggungan tipis yang memacu adrenalin.</p>
+                    <div class="card-bottom"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="rating-num">4.9</span><a href="#booking-trip" class="card-booking-chip">Booking</a></div>
+                </div>
+            </article>
+            <article class="card trip-card vibe-hardcore">
+                <div class="card-img"><img src="assets/images/GunungRante.png" alt="Gunung Rante"></div>
+                <div class="card-content">
+                    <span class="vibe-tag">Hardcore Adventure</span>
+                    <h3>Gunung Rante</h3>
+                    <p>Tantangan tanjakan berpasir dengan panorama kaldera yang memukau.</p>
+                    <div class="card-bottom"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="rating-num">4.9</span><a href="#booking-trip" class="card-booking-chip">Booking</a></div>
+                </div>
+            </article>
+            <article class="card trip-card vibe-chill">
+                <div class="card-img"><img src="assets/images/KawahWurung.png" alt="Kawah Wurung"></div>
+                <div class="card-content">
+                    <span class="vibe-tag">Chill &amp; Healing</span>
+                    <h3>Kawah Wurung</h3>
+                    <p>Hamparan sabana hijau nan sejuk, sangat pas untuk bersantai menyeduh kopi.</p>
+                    <div class="card-bottom"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="rating-num">4.9</span><a href="#booking-trip" class="card-booking-chip">Booking</a></div>
+                </div>
+            </article>
+            <article class="card trip-card vibe-chill">
+                <div class="card-img"><img src="assets/images/BukitTeletubbies.png" alt="Bukit Teletubbies"></div>
+                <div class="card-content">
+                    <span class="vibe-tag">Chill &amp; Healing</span>
+                    <h3>Bukit Teletubbies</h3>
+                    <p>Bukit hijau lembut untuk menikmati udara segar dan foto santai.</p>
+                    <div class="card-bottom"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="rating-num">4.9</span><a href="#booking-trip" class="card-booking-chip">Booking</a></div>
+                </div>
+            </article>
+            <article class="card trip-card vibe-chill">
+                <div class="card-img"><img src="assets/images/NiagaraMiniBondowoso.png" alt="Niagara Mini"></div>
+                <div class="card-content">
+                    <span class="vibe-tag">Chill &amp; Healing</span>
+                    <h3>Niagara Mini</h3>
+                    <p>Air terjun mini yang menyegarkan, cocok untuk trip keluarga dan teman.</p>
+                    <div class="card-bottom"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="rating-num">4.9</span><a href="#booking-trip" class="card-booking-chip">Booking</a></div>
+                </div>
+            </article>
+            <article class="card trip-card vibe-chill">
+                <div class="card-img"><img src="assets/images/AirTerjunTancakKembar.png" alt="Air Terjun Tancak Kembar"></div>
+                <div class="card-content">
+                    <span class="vibe-tag">Chill &amp; Healing</span>
+                    <h3>Air Terjun Tancak Kembar</h3>
+                    <p>Suasana air terjun alami dengan rute yang menenangkan.</p>
+                    <div class="card-bottom"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="rating-num">4.9</span><a href="#booking-trip" class="card-booking-chip">Booking</a></div>
+                </div>
+            </article>
+            <article class="card trip-card vibe-golden">
+                <div class="card-img"><img src="assets/images/BlueFireIjenBondowoso.png" alt="Kawah Ijen"></div>
+                <div class="card-content">
+                    <span class="vibe-tag">Golden Hour Spot</span>
+                    <h3>Kawah Ijen</h3>
+                    <p>Pesona kawah biru dan golden hour yang selalu jadi favorit wisatawan.</p>
+                    <div class="card-bottom"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="rating-num">4.9</span><a href="#booking-trip" class="card-booking-chip">Booking</a></div>
+                </div>
+            </article>
+            <article class="card trip-card vibe-golden">
+                <div class="card-img"><img src="assets/images/BukitMegasariParalayang.png" alt="Bukit Megasari"></div>
+                <div class="card-content">
+                    <span class="vibe-tag">Golden Hour Spot</span>
+                    <h3>Bukit Megasari</h3>
+                    <p>Spot sore hari dengan lanskap luas yang terasa dramatis.</p>
+                    <div class="card-bottom"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="rating-num">4.9</span><a href="#booking-trip" class="card-booking-chip">Booking</a></div>
+                </div>
+            </article>
+            <article class="card trip-card vibe-golden">
+                <div class="card-img"><img src="assets/images/BatuSo'onBondowoso.png" alt="Batu So'on Bondowoso"></div>
+                <div class="card-content">
+                    <span class="vibe-tag">Golden Hour Spot</span>
+                    <h3>Batu So'on</h3>
+                    <p>Formasi batu unik dengan cahaya sore yang cantik untuk dokumentasi.</p>
+                    <div class="card-bottom"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="rating-num">4.9</span><a href="#booking-trip" class="card-booking-chip">Booking</a></div>
+                </div>
+            </article>
+        </div>
 
-                                <div class="action-center">
-                <a href="?show_all=true#jastrip" class="btn-primary-green">LIHAT SEMUA DESTINASI <span>&#10095;</span></a>
-            </div>
-            </div>
+        <div class="action-center destination-action">
+            <label for="destinationExpand" class="btn-primary-green btn-destination-toggle">
+                <span class="toggle-label-more">LIHAT SEMUA DESTINASI</span>
+                <span class="toggle-label-less">TAMPILKAN LEBIH SEDIKIT</span>
+                <span>&#10095;</span>
+            </label>
+        </div>
+    </div>
 </section>
 
 <section id="booking-trip" class="booking-section" aria-hidden="true">
-    <div class="booking-modal-backdrop" data-close-booking></div>
+    <a href="#jastrip" class="booking-modal-backdrop" aria-label="Tutup booking"></a>
     <div class="booking-shell">
         <div class="booking-panel">
-            <button type="button" class="booking-close" data-close-booking aria-label="Tutup booking">&times;</button>
+            <a href="#jastrip" class="booking-close" aria-label="Tutup booking">&times;</a>
             <div class="booking-heading">
                 <span class="booking-kicker">Premium Trip Booking</span>
                 <h2>Booking ZGentara Trip</h2>
                 <p>Isi data booking untuk mengunci jadwal perjalanan kamu.</p>
-                <button type="button" class="booking-price-btn" id="openPriceList">Lihat Price List</button>
             </div>
 
             <div class="booking-selected-card">
-                <div class="booking-selected-image">
-                    <img src="assets/images/BlueFireIjenBondowoso.png" alt="Wisata dipilih" id="bookingTripImage">
-                </div>
+                <div class="booking-selected-image"><img src="assets/images/BlueFireIjenBondowoso.png" alt="Wisata dipilih"></div>
                 <div class="booking-selected-info">
                     <span>Wisata dipilih</span>
-                    <h3 id="bookingTripTitle">Pilih Wisata</h3>
-                    <p id="bookingTripGuide">Guide akan otomatis mengikuti wisata.</p>
+                    <h3>Pilih Wisata Favoritmu</h3>
+                    <p>Guide akan menyesuaikan wisata pilihan saat konfirmasi.</p>
                 </div>
                 <div class="booking-guide-mini">
-                    <img src="assets/images/foto1.png" alt="Guide" id="bookingGuidePhoto">
-                    <div>
-                        <strong id="bookingGuideName">-</strong>
-                        <small id="bookingGuidePhone">Nomor WhatsApp guide</small>
-                    </div>
+                    <img src="assets/images/foto1.png" alt="Guide">
+                    <div><strong>Tim ZGentara</strong><small>Konfirmasi via WhatsApp</small></div>
                 </div>
             </div>
 
-            <div class="booking-progress" aria-label="Progress booking">
-                <span class="booking-progress-fill" id="bookingProgressFill"></span>
-            </div>
-
-            <form class="booking-form" id="bookingForm">
-                <div class="booking-step active" data-step="1">
+            <form class="booking-form static-booking-form">
+                <div class="booking-step active">
                     <h3>Data Diri</h3>
-                    <div class="booking-field">
-                        <label for="bookingName">Nama Lengkap</label>
-                        <input type="text" id="bookingName" name="nama" autocomplete="name" required>
-                    </div>
-                    <div class="booking-field">
-                        <label for="bookingCity">Domisili</label>
-                        <select id="bookingCity" name="domisili" required>
-                            <option value="">Pilih Domisili</option>
-                            <option>Bondowoso</option>
-                            <option>Banyuwangi</option>
-                            <option>Jember</option>
-                            <option>Situbondo</option>
-                            <option>Surabaya</option>
-                            <option>Malang</option>
-                            <option>Luar Jawa Timur</option>
-                        </select>
-                    </div>
-                    <div class="booking-field">
-                        <label for="bookingAddress">Alamat</label>
-                        <textarea id="bookingAddress" name="alamat" rows="4" required></textarea>
-                    </div>
-                    <div class="booking-field">
-                        <label for="bookingWhatsapp">Nomor WhatsApp</label>
-                        <input type="tel" id="bookingWhatsapp" name="whatsapp" placeholder="08xxxxxxxxxx" required>
-                    </div>
-                    <button type="button" class="booking-next" data-next-step>Lanjut</button>
+                    <div class="booking-field"><label for="bookingNameStatic">Nama Lengkap</label><input type="text" id="bookingNameStatic" name="nama" autocomplete="name" required></div>
+                    <div class="booking-field"><label for="bookingCityStatic">Domisili</label><select id="bookingCityStatic" name="domisili" required><option value="">Pilih Domisili</option><option>Bondowoso</option><option>Banyuwangi</option><option>Jember</option><option>Situbondo</option><option>Surabaya</option><option>Malang</option><option>Luar Jawa Timur</option></select></div>
+                    <div class="booking-field"><label for="bookingAddressStatic">Alamat</label><textarea id="bookingAddressStatic" name="alamat" rows="4" required></textarea></div>
+                    <div class="booking-field"><label for="bookingWhatsappStatic">Nomor WhatsApp</label><input type="tel" id="bookingWhatsappStatic" name="whatsapp" placeholder="08xxxxxxxxxx" required></div>
                 </div>
 
-                <div class="booking-step" data-step="2">
+                <div class="booking-step active">
                     <h3>Detail Event</h3>
-                    <div class="booking-field">
-                        <label for="bookingTrip">Pilih Wisata</label>
-                        <select id="bookingTrip" name="wisata" required>
-                            <option value="">Pilih Wisata</option>
-                                                                                            <option value="Kawah Ijen" data-image="assets/images/BlueFireIjenBondowoso.png">Kawah Ijen</option>
-                                                                                            <option value="Blue Fire Ijen" data-image="assets/images/BlueFireIjenBondowoso.png">Blue Fire Ijen</option>
-                                                                                            <option value="Gunung Raung" data-image="assets/images/GunungRaung.png">Gunung Raung</option>
-                                                                                            <option value="Gunung Piramida" data-image="assets/images/GunungPiramidaBondowoso.png">Gunung Piramida</option>
-                                                                                            <option value="Gunung Rante" data-image="assets/images/GunungRante.png">Gunung Rante</option>
-                                                                                            <option value="Kawah Wurung" data-image="assets/images/KawahWurung.png">Kawah Wurung</option>
-                                                                                            <option value="Bukit Teletubbies" data-image="assets/images/BukitTeletubbies.png">Bukit Teletubbies</option>
-                                                                                            <option value="Niagara Mini" data-image="assets/images/NiagaraMiniBondowoso.png">Niagara Mini</option>
-                                                                                            <option value="Air Terjun Tancak Kembar" data-image="assets/images/AirTerjunTancakKembar.png">Air Terjun Tancak Kembar</option>
-                                                                                            <option value="Bukit Megasari" data-image="assets/images/BukitMegasariParalayang.png">Bukit Megasari</option>
-                                                    </select>
-                    </div>
-                    <div class="booking-field">
-                        <label for="bookingGuide">Guide Otomatis</label>
-                        <select id="bookingGuide" name="guide" required>
-                            <option value="">Pilih wisata terlebih dahulu</option>
-                        </select>
-                        <small id="bookingGuideNote">Guide akan muncul otomatis sesuai wisata yang dipilih.</small>
-                    </div>
-                    <div class="booking-field">
-                        <label for="bookingPackage">Pilih Paket Trip</label>
-                        <select id="bookingPackage" name="paket" required>
-                                                            <option value="basic" data-price="150000">Basic - 150K</option>
-                                                            <option value="premium" data-price="350000">Premium - 350K</option>
-                                                            <option value="vip" data-price="700000">VIP - 700K</option>
-                                                    </select>
-                    </div>
-                    <div class="booking-actions">
-                        <button type="button" class="booking-prev" data-prev-step>Kembali</button>
-                        <button type="button" class="booking-next" data-next-step>Lanjut</button>
-                    </div>
+                    <div class="booking-field"><label for="bookingTripStatic">Pilih Wisata</label><select id="bookingTripStatic" name="wisata" required><option value="">Pilih Wisata</option><option>Kawah Ijen</option><option>Blue Fire Ijen</option><option>Gunung Raung</option><option>Gunung Piramida</option><option>Gunung Rante</option><option>Kawah Wurung</option><option>Bukit Teletubbies</option><option>Niagara Mini</option><option>Air Terjun Tancak Kembar</option><option>Bukit Megasari</option></select></div>
+                    <div class="booking-field"><label for="bookingPackageStatic">Pilih Paket Trip</label><select id="bookingPackageStatic" name="paket" required><option>Basic - 150K</option><option>Premium - 350K</option><option>VIP - 700K</option></select></div>
                 </div>
 
-                <div class="booking-step" data-step="3">
+                <div class="booking-step active">
                     <h3>Jadwal</h3>
-                    <div class="booking-date-controls">
-                        <div class="booking-field">
-                            <label for="bookingMonth">Pilih Bulan</label>
-                            <select id="bookingMonth" name="bulan"></select>
-                        </div>
-                        <div class="booking-field">
-                            <label for="bookingYear">Pilih Tahun</label>
-                            <select id="bookingYear" name="tahun"></select>
-                        </div>
+                    <div class="booking-date-display">Kalender Booking Mei 2026</div>
+                    <div class="booking-calendar static-calendar" aria-label="Kalender booking Mei 2026">
+                        <div class="booking-calendar-day booking-calendar-head">Min</div><div class="booking-calendar-day booking-calendar-head">Sen</div><div class="booking-calendar-day booking-calendar-head">Sel</div><div class="booking-calendar-day booking-calendar-head">Rab</div><div class="booking-calendar-day booking-calendar-head">Kam</div><div class="booking-calendar-day booking-calendar-head">Jum</div><div class="booking-calendar-day booking-calendar-head">Sab</div>
+                        <div class="booking-calendar-day muted">26</div><div class="booking-calendar-day muted">27</div><div class="booking-calendar-day muted">28</div><div class="booking-calendar-day muted">29</div><div class="booking-calendar-day muted">30</div><button type="button" class="booking-calendar-day booking-date full">1</button><button type="button" class="booking-calendar-day booking-date ready">2</button>
+                        <button type="button" class="booking-calendar-day booking-date ready">3</button><button type="button" class="booking-calendar-day booking-date ready">4</button><button type="button" class="booking-calendar-day booking-date full">5</button><button type="button" class="booking-calendar-day booking-date ready">6</button><button type="button" class="booking-calendar-day booking-date full">7</button><button type="button" class="booking-calendar-day booking-date ready">8</button><button type="button" class="booking-calendar-day booking-date full">9</button>
+                        <button type="button" class="booking-calendar-day booking-date ready">10</button><button type="button" class="booking-calendar-day booking-date full">11</button><button type="button" class="booking-calendar-day booking-date full">12</button><button type="button" class="booking-calendar-day booking-date ready">13</button><button type="button" class="booking-calendar-day booking-date ready">14</button><button type="button" class="booking-calendar-day booking-date full">15</button><button type="button" class="booking-calendar-day booking-date ready">16</button>
+                        <button type="button" class="booking-calendar-day booking-date full">17</button><button type="button" class="booking-calendar-day booking-date full">18</button><button type="button" class="booking-calendar-day booking-date full">19</button><button type="button" class="booking-calendar-day booking-date ready">20</button><button type="button" class="booking-calendar-day booking-date full">21</button><button type="button" class="booking-calendar-day booking-date full">22</button><button type="button" class="booking-calendar-day booking-date full">23</button>
+                        <button type="button" class="booking-calendar-day booking-date full">24</button><button type="button" class="booking-calendar-day booking-date ready">25</button><button type="button" class="booking-calendar-day booking-date full">26</button><button type="button" class="booking-calendar-day booking-date full">27</button><button type="button" class="booking-calendar-day booking-date full">28</button><button type="button" class="booking-calendar-day booking-date full">29</button><button type="button" class="booking-calendar-day booking-date full">30</button>
+                        <button type="button" class="booking-calendar-day booking-date full">31</button><div class="booking-calendar-day muted">1</div><div class="booking-calendar-day muted">2</div><div class="booking-calendar-day muted">3</div><div class="booking-calendar-day muted">4</div><div class="booking-calendar-day muted">5</div><div class="booking-calendar-day muted">6</div>
                     </div>
-                    <div class="booking-date-display" id="bookingDateDisplay">Pilih tanggal dari kalender</div>
-                    <div class="booking-calendar" id="bookingCalendar" aria-label="Kalender booking"></div>
-                    <div class="booking-legend">
-                        <span><i class="legend-full"></i> Full</span>
-                        <span><i class="legend-ready"></i> Tersedia</span>
-                    </div>
-                    <p class="booking-status" id="bookingStatus">Tanggal dengan outline merah sudah penuh dan tidak dapat dipilih.</p>
-                    <div class="booking-actions">
-                        <button type="button" class="booking-prev" data-prev-step>Kembali</button>
-                        <button type="button" class="booking-next" data-next-step>Lanjut</button>
-                    </div>
+                    <div class="booking-legend"><span><i class="legend-full"></i> Full</span><span><i class="legend-ready"></i> Tersedia</span></div>
+                    <p class="booking-status">Tanggal dengan outline merah sudah penuh. Pilih tanggal tersedia saat konfirmasi dengan admin.</p>
                 </div>
 
-                <div class="booking-step" data-step="4">
-                    <h3>Konfirmasi Booking</h3>
-                    <div class="booking-summary" id="bookingSummary"></div>
-                    <div class="booking-actions">
-                        <button type="button" class="booking-prev" data-prev-step>Kembali</button>
-                        <a class="booking-whatsapp" id="bookingWhatsappLink" href="#" target="_blank" rel="noopener">Booking Sekarang</a>
-                    </div>
+                <div class="price-grid static-price-grid">
+                    <article class="price-card"><h4>Paket Basic</h4><strong>150K</strong><p>Trip hemat dengan guide, briefing rute, dan dokumentasi ringan.</p></article>
+                    <article class="price-card featured"><h4>Paket Premium</h4><strong>350K</strong><p>Paket favorit dengan itinerary lebih rapi, guide prioritas, dan dokumentasi.</p></article>
+                    <article class="price-card"><h4>Paket VIP</h4><strong>700K</strong><p>Pengalaman privat dengan jadwal fleksibel, support lengkap, dan service premium.</p></article>
                 </div>
+
+                <div class="booking-actions"><a class="booking-whatsapp" href="https://wa.me/6287781896510?text=Halo%20ZGentara%20Trip%2C%20saya%20ingin%20booking%20trip." target="_blank" rel="noopener">Booking Sekarang</a></div>
             </form>
         </div>
     </div>
-
-    <div class="price-modal" id="priceModal" aria-hidden="true">
-        <div class="price-modal-backdrop" data-close-price></div>
-        <div class="price-modal-card" role="dialog" aria-modal="true" aria-labelledby="priceModalTitle">
-            <button type="button" class="price-modal-close" data-close-price aria-label="Tutup price list">&times;</button>
-            <span class="booking-kicker">Price List</span>
-            <h3 id="priceModalTitle">Pilih Paket Trip</h3>
-            <div class="price-grid">
-                <article class="price-card">
-                    <h4>Paket Basic</h4>
-                    <strong>150K</strong>
-                    <p>Trip hemat dengan guide, briefing rute, dan dokumentasi ringan.</p>
-                </article>
-                <article class="price-card featured">
-                    <h4>Paket Premium</h4>
-                    <strong>350K</strong>
-                    <p>Paket favorit dengan itinerary lebih rapi, guide prioritas, dan dokumentasi.</p>
-                </article>
-                <article class="price-card">
-                    <h4>Paket VIP</h4>
-                    <strong>700K</strong>
-                    <p>Pengalaman privat dengan jadwal fleksibel, support lengkap, dan service premium.</p>
-                </article>
-            </div>
-        </div>
-    </div>
 </section>
-
 <section class="why-section">
     <img src="assets/icons/daun.png" alt="" class="decor-leaf decor-leaf-left" aria-hidden="true">
     <img src="assets/icons/daun.png" alt="" class="decor-leaf decor-leaf-right" aria-hidden="true">
@@ -768,408 +701,7 @@
     </div>
 </section>
 
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    const bookingGuides = [{"id":"guide-1","name":"ALFARO","role":"Mountain Guide","phone":"6287781896510","photo":"foto1.png","trips":["Kawah Ijen","Blue Fire Ijen"],"fullDates":["2026-05-01","2026-05-09","2026-05-19","2026-05-23","2026-05-30","2026-06-07","2026-06-14","2026-06-21"]},{"id":"guide-2","name":"IHSAN","role":"Adventure Guide","phone":"6285854655200","photo":"foto2.png","trips":["Gunung Raung","Gunung Piramida"],"fullDates":["2026-05-05","2026-05-12","2026-05-18","2026-05-22","2026-05-29","2026-06-03","2026-06-17","2026-06-26"]},{"id":"guide-3","name":"MAHSUM","role":"Nature Explorer","phone":"6282237774608","photo":"foto3.png","trips":["Gunung Rante","Kawah Wurung"],"fullDates":["2026-05-07","2026-05-15","2026-05-21","2026-05-28","2026-06-04","2026-06-15","2026-06-24"]},{"id":"guide-4","name":"DARA","role":"Trip Navigator","phone":"6285707035170","photo":"foto4.png","trips":["Bukit Teletubbies","Niagara Mini"],"fullDates":["2026-05-11","2026-05-19","2026-05-22","2026-06-08","2026-06-18","2026-06-29"]},{"id":"guide-5","name":"REGITA","role":"Camping Specialist","phone":"6285731348852","photo":"foto5.png","trips":["Air Terjun Tancak Kembar","Bukit Megasari"],"fullDates":["2026-05-03","2026-05-17","2026-05-24","2026-05-31","2026-06-06","2026-06-20","2026-06-27"]}];
-    const bookingPackages = [{"id":"basic","name":"Basic","price":150000,"label":"Basic - 150K"},{"id":"premium","name":"Premium","price":350000,"label":"Premium - 350K"},{"id":"vip","name":"VIP","price":700000,"label":"VIP - 700K"}];
-    const assetBase = "assets";
-    const monthNames = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
-    const shortDays = ['Min', 'Sen', 'Sel', 'Rab', 'Kam', 'Jum', 'Sab'];
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
 
-    const steps = Array.from(document.querySelectorAll('.booking-step'));
-    const bookingModal = document.getElementById('booking-trip');
-    const closeBookingButtons = document.querySelectorAll('[data-close-booking]');
-    const tripTriggers = document.querySelectorAll('.booking-trip-trigger');
-    const progressFill = document.getElementById('bookingProgressFill');
-    const tripSelect = document.getElementById('bookingTrip');
-    const guideSelect = document.getElementById('bookingGuide');
-    const guideNote = document.getElementById('bookingGuideNote');
-    const packageSelect = document.getElementById('bookingPackage');
-    const monthSelect = document.getElementById('bookingMonth');
-    const yearSelect = document.getElementById('bookingYear');
-    const calendar = document.getElementById('bookingCalendar');
-    const dateDisplay = document.getElementById('bookingDateDisplay');
-    const statusText = document.getElementById('bookingStatus');
-    const summary = document.getElementById('bookingSummary');
-    const whatsappLink = document.getElementById('bookingWhatsappLink');
-    const tripImage = document.getElementById('bookingTripImage');
-    const tripTitle = document.getElementById('bookingTripTitle');
-    const tripGuide = document.getElementById('bookingTripGuide');
-    const guidePhoto = document.getElementById('bookingGuidePhoto');
-    const guideName = document.getElementById('bookingGuideName');
-    const guidePhone = document.getElementById('bookingGuidePhone');
-    const priceModal = document.getElementById('priceModal');
-    const openPriceList = document.getElementById('openPriceList');
-    const closePriceButtons = document.querySelectorAll('[data-close-price]');
-    let activeStep = 1;
-    let selectedDate = '';
-
-    function pad(value) {
-        return String(value).padStart(2, '0');
-    }
-
-    function toDateKey(year, month, day) {
-        return year + '-' + pad(month + 1) + '-' + pad(day);
-    }
-
-    function formatDateId(dateKey) {
-        if (!dateKey) {
-            return 'Pilih tanggal dari kalender';
-        }
-        const parts = dateKey.split('-').map(Number);
-        return parts[2] + ' ' + monthNames[parts[1] - 1] + ' ' + parts[0];
-    }
-
-    function formatRupiah(value) {
-        return new Intl.NumberFormat('id-ID', {
-            style: 'currency',
-            currency: 'IDR',
-            maximumFractionDigits: 0
-        }).format(value);
-    }
-
-    function getSelectedGuide() {
-        return bookingGuides.find(function (guide) {
-            return guide.id === guideSelect.value;
-        });
-    }
-
-    function getGuideByTrip(tripName) {
-        return bookingGuides.find(function (guide) {
-            return guide.trips.includes(tripName);
-        });
-    }
-
-    function getSelectedPackage() {
-        return bookingPackages.find(function (item) {
-            return item.id === packageSelect.value;
-        }) || bookingPackages[0];
-    }
-
-    function showStep(stepNumber) {
-        activeStep = stepNumber;
-        steps.forEach(function (step) {
-            step.classList.toggle('active', Number(step.dataset.step) === activeStep);
-        });
-        progressFill.style.width = (activeStep * 25) + '%';
-        if (activeStep === 3) {
-            renderCalendar();
-        }
-        if (activeStep === 4) {
-            renderSummary();
-        }
-    }
-
-    function openBookingModal(tripName, imageUrl) {
-        bookingModal.classList.add('active');
-        bookingModal.setAttribute('aria-hidden', 'false');
-        document.body.classList.add('booking-modal-open');
-        if (tripName) {
-            tripSelect.value = tripName;
-            updateGuideOptions(imageUrl);
-        }
-        showStep(1);
-    }
-
-    function closeBookingModal() {
-        bookingModal.classList.remove('active');
-        bookingModal.setAttribute('aria-hidden', 'true');
-        document.body.classList.remove('booking-modal-open');
-    }
-
-    function validateStep(stepNumber) {
-        const currentStep = document.querySelector('.booking-step[data-step="' + stepNumber + '"]');
-        const fields = Array.from(currentStep.querySelectorAll('input, select, textarea'));
-        for (const field of fields) {
-            if (!field.checkValidity()) {
-                field.reportValidity();
-                return false;
-            }
-        }
-        if (stepNumber === 3 && selectedDate === '') {
-            statusText.textContent = 'Pilih satu tanggal tersedia sebelum melanjutkan.';
-            statusText.classList.add('error');
-            return false;
-        }
-        statusText.classList.remove('error');
-        return true;
-    }
-
-    function updateSelectedPreview(imageOverride) {
-        const selectedTrip = tripSelect.value;
-        const selectedGuide = getSelectedGuide();
-        const selectedOption = tripSelect.options[tripSelect.selectedIndex];
-        const imageUrl = imageOverride || (selectedOption ? selectedOption.dataset.image : '');
-
-        tripTitle.textContent = selectedTrip || 'Pilih Wisata';
-        if (imageUrl) {
-            tripImage.src = imageUrl;
-            tripImage.alt = selectedTrip || 'Wisata dipilih';
-        }
-
-        if (selectedGuide) {
-            tripGuide.textContent = selectedGuide.name + ' - ' + selectedGuide.role;
-            guidePhoto.src = assetBase + '/images/' + selectedGuide.photo;
-            guidePhoto.alt = selectedGuide.name;
-            guideName.textContent = selectedGuide.name;
-            guidePhone.textContent = selectedGuide.phone;
-        } else {
-            tripGuide.textContent = 'Guide akan otomatis mengikuti wisata.';
-            guidePhoto.src = assetBase + '/images/foto1.png';
-            guideName.textContent = '-';
-            guidePhone.textContent = 'Nomor WhatsApp guide';
-        }
-    }
-
-    function updateGuideOptions(imageOverride) {
-        const selectedTrip = tripSelect.value;
-        const selectedGuide = getGuideByTrip(selectedTrip);
-
-        guideSelect.innerHTML = '';
-        selectedDate = '';
-        dateDisplay.textContent = formatDateId('');
-
-        if (!selectedTrip || !selectedGuide) {
-            guideSelect.innerHTML = '<option value="">Pilih wisata terlebih dahulu</option>';
-            guideNote.textContent = 'Guide akan muncul otomatis sesuai wisata yang dipilih.';
-            updateSelectedPreview(imageOverride);
-            renderCalendar();
-            return;
-        }
-
-        const option = document.createElement('option');
-        option.value = selectedGuide.id;
-        option.textContent = selectedGuide.name + ' - ' + selectedGuide.role;
-        option.selected = true;
-        guideSelect.appendChild(option);
-        guideNote.textContent = selectedGuide.name + ' menangani ' + selectedGuide.trips.join(' dan ') + '.';
-        updateSelectedPreview(imageOverride);
-        renderCalendar();
-    }
-
-    function buildMonthYearOptions() {
-        const currentMonth = today.getMonth();
-        const currentYear = today.getFullYear();
-
-        monthNames.forEach(function (month, index) {
-            const option = document.createElement('option');
-            option.value = index;
-            option.textContent = month;
-            option.selected = index === currentMonth;
-            monthSelect.appendChild(option);
-        });
-
-        for (let year = currentYear; year <= currentYear + 2; year++) {
-            const option = document.createElement('option');
-            option.value = year;
-            option.textContent = year;
-            option.selected = year === currentYear;
-            yearSelect.appendChild(option);
-        }
-    }
-
-    function renderCalendar() {
-        const year = Number(yearSelect.value || today.getFullYear());
-        const month = Number(monthSelect.value || today.getMonth());
-        const selectedGuide = getSelectedGuide();
-        const fullDates = selectedGuide ? selectedGuide.fullDates : [];
-        const firstDay = new Date(year, month, 1).getDay();
-        const daysInMonth = new Date(year, month + 1, 0).getDate();
-
-        calendar.innerHTML = '';
-        shortDays.forEach(function (day) {
-            const header = document.createElement('div');
-            header.className = 'booking-calendar-day booking-calendar-head';
-            header.textContent = day;
-            calendar.appendChild(header);
-        });
-
-        for (let blank = 0; blank < firstDay; blank++) {
-            const empty = document.createElement('div');
-            empty.className = 'booking-calendar-day empty';
-            calendar.appendChild(empty);
-        }
-
-        for (let day = 1; day <= daysInMonth; day++) {
-            const key = toDateKey(year, month, day);
-            const dateObject = new Date(year, month, day);
-            const isFull = fullDates.includes(key);
-            const isPast = dateObject < today;
-            const button = document.createElement('button');
-            button.type = 'button';
-            button.className = 'booking-calendar-day booking-date';
-            button.textContent = day;
-            button.dataset.date = key;
-
-            if (isFull) {
-                button.classList.add('full');
-                button.disabled = true;
-                button.title = 'FULL';
-            } else if (isPast) {
-                button.classList.add('past');
-                button.disabled = true;
-                button.title = 'Tanggal sudah lewat';
-            } else {
-                button.classList.add('ready');
-                button.title = 'TERSEDIA';
-            }
-
-            if (selectedDate === key) {
-                button.classList.add('selected');
-            }
-
-            button.addEventListener('click', function () {
-                selectedDate = key;
-                dateDisplay.textContent = formatDateId(selectedDate);
-                statusText.textContent = 'Tanggal ' + formatDateId(selectedDate) + ' tersedia untuk ' + (selectedGuide ? selectedGuide.name : 'guide pilihan') + '.';
-                statusText.classList.remove('error');
-                renderCalendar();
-            });
-
-            calendar.appendChild(button);
-        }
-    }
-
-    function renderSummary() {
-        const selectedGuide = getSelectedGuide();
-        const selectedPackage = getSelectedPackage();
-        const values = {
-            nama: document.getElementById('bookingName').value.trim(),
-            domisili: document.getElementById('bookingCity').value,
-            alamat: document.getElementById('bookingAddress').value.trim(),
-            whatsapp: document.getElementById('bookingWhatsapp').value.trim(),
-            wisata: tripSelect.value,
-            guide: selectedGuide ? selectedGuide.name + ' - ' + selectedGuide.role : '-',
-            paket: selectedPackage.name,
-            tanggal: formatDateId(selectedDate),
-            total: formatRupiah(selectedPackage.price)
-        };
-
-        const summaryRows = [
-            ['Nama', values.nama],
-            ['Domisili', values.domisili],
-            ['WhatsApp', values.whatsapp],
-            ['Wisata', values.wisata],
-            ['Guide', values.guide],
-            ['Nomor Guide', selectedGuide ? selectedGuide.phone : '-'],
-            ['Tanggal Booking', values.tanggal],
-            ['Paket Trip', values.paket],
-            ['Total Harga', values.total]
-        ];
-        summary.innerHTML = '';
-        summaryRows.forEach(function (row) {
-            const item = document.createElement('div');
-            const label = document.createElement('span');
-            const value = document.createElement('strong');
-            label.textContent = row[0];
-            value.textContent = row[1];
-            item.appendChild(label);
-            item.appendChild(value);
-            summary.appendChild(item);
-        });
-
-        const message = [
-            'Halo Guide ' + (selectedGuide ? selectedGuide.name : ''),
-            '',
-            'Saya ingin melakukan booking trip.',
-            '',
-            'Data Booking:',
-            '- Nama: ' + values.nama,
-            '- Domisili: ' + values.domisili,
-            '- Nomor WhatsApp: ' + values.whatsapp,
-            '- Wisata: ' + values.wisata,
-            '- Paket: ' + values.paket,
-            '- Tanggal Booking: ' + values.tanggal,
-            '',
-            'Mohon informasi lebih lanjut 🙌'
-        ].join('\n');
-        whatsappLink.href = 'https://wa.me/' + (selectedGuide ? selectedGuide.phone : '') + '?text=' + encodeURIComponent(message);
-    }
-
-    document.querySelectorAll('[data-next-step]').forEach(function (button) {
-        button.addEventListener('click', function () {
-            if (validateStep(activeStep)) {
-                showStep(Math.min(activeStep + 1, 4));
-            }
-        });
-    });
-
-    document.querySelectorAll('[data-prev-step]').forEach(function (button) {
-        button.addEventListener('click', function () {
-            showStep(Math.max(activeStep - 1, 1));
-        });
-    });
-
-    tripTriggers.forEach(function (card) {
-        card.addEventListener('click', function () {
-            openBookingModal(card.dataset.trip, card.dataset.image);
-        });
-        card.addEventListener('keydown', function (event) {
-            if (event.key === 'Enter' || event.key === ' ') {
-                event.preventDefault();
-                openBookingModal(card.dataset.trip, card.dataset.image);
-            }
-        });
-    });
-
-    document.querySelectorAll('a[href="#booking-trip"]').forEach(function (link) {
-        link.addEventListener('click', function (event) {
-            event.preventDefault();
-            openBookingModal(tripSelect.value || 'Kawah Ijen');
-        });
-    });
-
-    closeBookingButtons.forEach(function (button) {
-        button.addEventListener('click', closeBookingModal);
-    });
-
-    document.addEventListener('keydown', function (event) {
-        if (event.key === 'Escape') {
-            closeBookingModal();
-            priceModal.classList.remove('active');
-            priceModal.setAttribute('aria-hidden', 'true');
-        }
-    });
-
-    tripSelect.addEventListener('change', function () {
-        updateGuideOptions();
-    });
-    guideSelect.addEventListener('change', function () {
-        selectedDate = '';
-        dateDisplay.textContent = formatDateId('');
-        updateSelectedPreview();
-        renderCalendar();
-    });
-    monthSelect.addEventListener('change', function () {
-        selectedDate = '';
-        dateDisplay.textContent = formatDateId('');
-        renderCalendar();
-    });
-    yearSelect.addEventListener('change', function () {
-        selectedDate = '';
-        dateDisplay.textContent = formatDateId('');
-        renderCalendar();
-    });
-
-    openPriceList.addEventListener('click', function () {
-        priceModal.classList.add('active');
-        priceModal.setAttribute('aria-hidden', 'false');
-    });
-
-    closePriceButtons.forEach(function (button) {
-        button.addEventListener('click', function () {
-            priceModal.classList.remove('active');
-            priceModal.setAttribute('aria-hidden', 'true');
-        });
-    });
-
-    buildMonthYearOptions();
-    updateGuideOptions();
-    showStep(1);
-});
-</script>
 </main>
 
 <footer class="site-footer">

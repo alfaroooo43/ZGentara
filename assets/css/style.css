@@ -1,4 +1,4 @@
-:root {
+﻿:root {
     --green-dark: #06462d;
     --green: #0f6b45;
     --green-soft: #eaf3ee;
@@ -2275,3 +2275,135 @@ body.booking-modal-open {
         grid-template-columns: 1fr;
     }
 }
+
+/* #CONTOH CSS ONLY DESTINATION FILTER */
+.destination-filter-toggle,
+.destination-expand-toggle {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.css-filter-panel {
+    max-width: 760px;
+}
+
+.destination-filter-shell .filter-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+#filter-all:checked ~ .css-filter-panel .filter-all-label,
+#filter-hardcore:checked ~ .css-filter-panel .filter-hardcore-label,
+#filter-chill:checked ~ .css-filter-panel .filter-chill-label,
+#filter-golden:checked ~ .css-filter-panel .filter-golden-label {
+    border-color: var(--green);
+    background: var(--green);
+    color: var(--white);
+}
+
+#destinationExpand:not(:checked) ~ .destination-card-grid .trip-card:nth-of-type(n+5) {
+    display: none;
+}
+
+#filter-hardcore:checked ~ .destination-card-grid .trip-card,
+#filter-chill:checked ~ .destination-card-grid .trip-card,
+#filter-golden:checked ~ .destination-card-grid .trip-card {
+    display: none;
+}
+
+#filter-hardcore:checked ~ .destination-card-grid .trip-card.vibe-hardcore,`r`n#filter-chill:checked ~ .destination-card-grid .trip-card.vibe-chill,`r`n#filter-golden:checked ~ .destination-card-grid .trip-card.vibe-golden,`r`n#filter-all:checked ~ #destinationExpand:checked ~ .destination-card-grid .trip-card {
+    display: block;
+    animation: destinationReveal 0.32s ease both;
+}
+
+.destination-action .toggle-label-less {
+    display: none;
+}
+
+#destinationExpand:checked ~ .destination-action .toggle-label-more {
+    display: none;
+}
+
+#destinationExpand:checked ~ .destination-action .toggle-label-less {
+    display: inline;
+}
+
+@keyframes destinationReveal {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card-booking-chip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* #CONTOH CSS ONLY BOOKING POPUP */
+.booking-section:target {
+    display: flex;
+}
+
+.booking-section:target .booking-step,
+.static-booking-form .booking-step {
+    display: block;
+}
+
+.static-booking-form {
+    display: grid;
+    gap: 24px;
+}
+
+.static-booking-form .booking-step {
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(15, 107, 69, 0.1);
+}
+
+.static-booking-form .booking-step:last-of-type {
+    border-bottom: 0;
+}
+
+.static-calendar .booking-calendar-day.muted {
+    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.5);
+    color: rgba(111, 125, 118, 0.55);
+    cursor: default;
+}
+
+.static-calendar .booking-date {
+    cursor: default;
+}
+
+.static-price-grid {
+    margin-top: 6px;
+}
+
+.static-booking-form .booking-actions {
+    grid-template-columns: 1fr;
+}
+
+@media (max-width: 640px) {
+    .css-filter-panel {
+        max-width: 100%;
+    }
+
+    .destination-action .btn-destination-toggle {
+        width: 100%;
+    }
+
+    .static-booking-form {
+        gap: 18px;
+    }
+}
+

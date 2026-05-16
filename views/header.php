@@ -14,7 +14,7 @@ $assetBase = $data['asset_base'] ?? '../assets';
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://zgentara.vercel.app/">
     <link rel="icon" type="image/png" href="<?= htmlspecialchars($assetBase); ?>/icons/LogoZGentara.png">
-    <link rel="stylesheet" href="<?= htmlspecialchars($assetBase); ?>/css/style.css?v=20260524">
+    <link rel="stylesheet" href="<?= htmlspecialchars($assetBase); ?>/css/style.css?v=20260525">
 </head>
 <body>
 

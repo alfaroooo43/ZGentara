@@ -9,7 +9,7 @@ $assetBase = $data['asset_base'] ?? '../assets';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= htmlspecialchars($pageTitle); ?></title>
     <link rel="icon" type="image/png" href="<?= htmlspecialchars($assetBase); ?>/icons/LogoZGentara.png">
-    <link rel="stylesheet" href="<?= htmlspecialchars($assetBase); ?>/css/style.css?v=20260521">
+    <link rel="stylesheet" href="<?= htmlspecialchars($assetBase); ?>/css/style.css?v=20260524">
 </head>
 <body>
 

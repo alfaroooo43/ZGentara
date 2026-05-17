@@ -14,7 +14,7 @@ $assetBase = $data['asset_base'] ?? '../assets';
                 </span>
                 <span>ZGentara Trip</span>
             </h3>
-            <p>Menyediakan pengalaman perjalanan terbaik untuk menjelajahi keindahan Indonesia yang tak terlupakan.</p>
+            <p>Menyediakan pengalaman perjalanan terbaik untuk menjelajahi keindahan Indonesia.</p>
         </div>
 
         <div class="footer-col">
@@ -24,16 +24,6 @@ $assetBase = $data['asset_base'] ?? '../assets';
                 <li><a href="#jastrip">Booking</a></li>
                 <li><a href="#testimoni">Testimoni</a></li>
                 <li><a href="#tentang">Tentang Kami</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-col">
-            <h4>LAYANAN</h4>
-            <ul>
-                <li><a href="#jastrip">Paket Wisata</a></li>
-                <li><a href="#jastrip">Sewa Mobil</a></li>
-                <li><a href="#jastrip">Tiket Pesawat</a></li>
-                <li><a href="#jastrip">Hotel</a></li>
             </ul>
         </div>
 

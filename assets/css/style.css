@@ -1050,7 +1050,7 @@ textarea {
 
 .footer-container {
     display: grid;
-    grid-template-columns: 1.55fr 0.85fr 0.95fr 1.35fr;
+    grid-template-columns: 1.6fr 0.8fr 1.2fr;
     gap: 34px;
     margin-bottom: 32px;
 }
@@ -2714,6 +2714,10 @@ body.booking-modal-open {
     margin-bottom: 26px;
 }
 
+.site-footer .footer-container {
+    grid-template-columns: 1.6fr 0.8fr 1.2fr;
+}
+
 .footer-brand-col h3 {
     margin-bottom: 10px;
     font-size: 1.15rem;
@@ -2784,6 +2788,10 @@ body.booking-modal-open {
     .footer-container {
         gap: 24px;
     }
+
+    .site-footer .footer-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
 @media (max-width: 640px) {
@@ -2849,6 +2857,10 @@ body.booking-modal-open {
 
     .site-footer {
         padding-top: 34px;
+    }
+
+    .site-footer .footer-container {
+        grid-template-columns: 1fr;
     }
 }
 

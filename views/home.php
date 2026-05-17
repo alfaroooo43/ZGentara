@@ -560,22 +560,22 @@ $bookingPackages = [
 
         <div class="reason-grid">
             <div class="reason-box">
-                <div class="circle-icon"><img src="<?= htmlspecialchars($assetBase); ?>/icons/IconPelindung.png" alt="" class="reason-icon-img"></div>
+                <div class="circle-icon">&#128101;</div>
                 <h4>Berpengalaman</h4>
                 <p>Kami telah melayani ribuan pelanggan dengan pengalaman perjalanan terbaik.</p>
             </div>
             <div class="reason-box">
-                <div class="circle-icon"><img src="<?= htmlspecialchars($assetBase); ?>/icons/IconKalender.png" alt="" class="reason-icon-img"></div>
+                <div class="circle-icon">&#128077;</div>
                 <h4>Harga Terjangkau</h4>
                 <p>Harga kompetitif dengan kualitas layanan dan fasilitas terbaik.</p>
             </div>
             <div class="reason-box">
-                <div class="circle-icon"><img src="<?= htmlspecialchars($assetBase); ?>/icons/IconGunung.png" alt="" class="reason-icon-img"></div>
+                <div class="circle-icon">&#128506;</div>
                 <h4>Paket Lengkap</h4>
                 <p>Paket perjalanan lengkap mulai dari transportasi, akomodasi, hingga itinerary.</p>
             </div>
             <div class="reason-box">
-                <div class="circle-icon"><img src="<?= htmlspecialchars($assetBase); ?>/icons/IconHeadphone.png" alt="" class="reason-icon-img"></div>
+                <div class="circle-icon">&#127942;</div>
                 <h4>Tim Profesional</h4>
                 <p>Didukung oleh tim profesional dan berpengalaman di bidang pariwisata.</p>
             </div>
@@ -1103,6 +1103,36 @@ document.addEventListener('DOMContentLoaded', function () {
             priceModal.setAttribute('aria-hidden', 'true');
         });
     });
+
+    const saranForm = document.getElementById('saranForm');
+    if (saranForm) {
+        saranForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            if (!saranForm.checkValidity()) {
+                saranForm.reportValidity();
+                return;
+            }
+
+            const formData = new FormData(saranForm);
+            const message = [
+                'Halo Admin Gantara Trip',
+                '',
+                'Saya ingin memberikan saran/kritik.',
+                '',
+                'Nama:',
+                formData.get('nama'),
+                '',
+                'Email:',
+                formData.get('email'),
+                '',
+                'Pesan:',
+                formData.get('pesan')
+            ].join('\n');
+
+            window.open('https://wa.me/6287781896510?text=' + encodeURIComponent(message), '_blank', 'noopener');
+        });
+    }
 
     buildMonthYearOptions();
     updateGuideOptions();

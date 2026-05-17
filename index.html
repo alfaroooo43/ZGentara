@@ -10,7 +10,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://zgentara.vercel.app/">
     <link rel="icon" type="image/png" href="assets/icons/LogoZGentara.png">
-    <link rel="stylesheet" href="assets/css/style.css?v=20260525">
+    <link rel="stylesheet" href="assets/css/style.css?v=20260526">
 </head>
 <body>
 
@@ -27,7 +27,7 @@
         <nav class="navbar" aria-label="Navigasi utama">
             <ul class="nav-menu">
                 <li><a href="#hero"><span class="nav-home">&#8962;</span> BERANDA</a></li>
-                <li><a href="#booking-trip">BOOKING</a></li>
+                <li><a href="#jastrip">BOOKING</a></li>
                 <li><a href="#testimoni">TESTIMONI</a></li>
                 <li><a href="#tentang">TENTANG</a></li>
             </ul>
@@ -222,6 +222,8 @@
             </article>
         </div>
 
+        <p class="empty-message destination-empty-message" id="destinationEmptyMessage">Destinasi tidak ditemukan. ZGentara Trip saat ini fokus pada wisata Bondowoso.</p>
+
         <div class="action-center destination-action">
             <label for="destinationExpand" class="btn-primary-green btn-destination-toggle">
                 <span class="toggle-label-more">LIHAT SEMUA DESTINASI</span>
@@ -255,7 +257,7 @@
                 <div class="booking-guide-mini">
                     <img src="assets/images/foto1.png" alt="Guide" id="bookingGuidePhoto">
                     <div>
-                        <strong id="bookingGuideName">Alfaro</strong>
+                        <strong id="bookingGuideName">ALFARO</strong>
                         <small id="bookingGuidePhone">WhatsApp guide</small>
                     </div>
                 </div>
@@ -265,13 +267,15 @@
                 <div class="booking-step active booking-form-grid">
                     <h3>Data Diri</h3>
                     <div class="booking-field"><label for="bookingName">Nama Lengkap</label><input type="text" id="bookingName" name="nama" autocomplete="name" required></div>
-                    <div class="booking-field"><label for="bookingCity">Domisili</label><select id="bookingCity" name="domisili" required><option value="">Pilih Domisili</option><option>Bondowoso</option><option>Banyuwangi</option><option>Jember</option><option>Situbondo</option><option>Surabaya</option><option>Malang</option><option>Luar Jawa Timur</option></select></div>
+                    <div class="booking-field"><label for="bookingCity">Domisili</label><select id="bookingCity" name="domisili" required><option value="">Pilih Domisili</option><option>Bangkalan</option><option>Banyuwangi</option><option>Batu</option><option>Blitar</option><option>Bojonegoro</option><option>Bondowoso</option><option>Gresik</option><option>Jember</option><option>Jombang</option><option>Kediri</option><option>Kota Blitar</option><option>Kota Kediri</option><option>Kota Madiun</option><option>Kota Malang</option><option>Kota Mojokerto</option><option>Kota Pasuruan</option><option>Kota Probolinggo</option><option>Lamongan</option><option>Lumajang</option><option>Madiun</option><option>Magetan</option><option>Malang</option><option>Mojokerto</option><option>Nganjuk</option><option>Ngawi</option><option>Pacitan</option><option>Pamekasan</option><option>Pasuruan</option><option>Ponorogo</option><option>Probolinggo</option><option>Sampang</option><option>Sidoarjo</option><option>Situbondo</option><option>Sumenep</option><option>Surabaya</option><option>Trenggalek</option><option>Tuban</option><option>Tulungagung</option><option>Luar Jawa Timur</option></select></div>
+                    <div class="booking-field"><label for="bookingWhatsapp">Nomor WhatsApp</label><input type="tel" id="bookingWhatsapp" name="whatsapp" placeholder="08xxxxxxxxxx" required></div>
                     <div class="booking-field booking-field-full"><label for="bookingAddress">Alamat</label><textarea id="bookingAddress" name="alamat" rows="3" required></textarea></div>
                 </div>
 
                 <div class="booking-step active booking-form-grid">
                     <h3>Detail Event</h3>
-                    <div class="booking-field"><label for="bookingTrip">Pilih Wisata</label><select id="bookingTrip" name="wisata" required><option>Kawah Ijen</option><option>Blue Fire Ijen</option><option>Gunung Raung</option><option>Gunung Piramida</option><option>Gunung Rante</option><option>Kawah Wurung</option><option>Bukit Teletubbies</option><option>Niagara Mini</option><option>Air Terjun Tancak Kembar</option><option>Bukit Megasari</option><option>Batu So'on</option></select></div>
+                    <div class="booking-field"><label for="bookingTrip">Wisata Terkunci</label><input type="text" id="bookingTrip" name="wisata" value="Kawah Ijen" readonly required></div>
+                    <div class="booking-field"><label for="bookingPackage">Paket</label><select id="bookingPackage" name="paket" required><option>Basic - 150K</option><option>Premium - 350K</option><option>VIP - 700K</option></select></div>
                     <div class="booking-field"><label for="bookingParticipants">Jumlah Peserta</label><input type="number" id="bookingParticipants" name="peserta" min="1" max="30" value="1" required></div>
                     <div class="booking-field booking-field-full"><label for="bookingNote">Catatan</label><textarea id="bookingNote" name="catatan" rows="3" placeholder="Contoh: request tanggal, titik jemput, atau kebutuhan khusus."></textarea></div>
                 </div>
@@ -303,22 +307,22 @@
 
         <div class="reason-grid">
             <div class="reason-box">
-                <div class="circle-icon">&#128101;</div>
+                <div class="circle-icon"><img src="assets/icons/IconPelindung.png" alt="" class="reason-icon-img"></div>
                 <h4>Berpengalaman</h4>
                 <p>Kami telah melayani ribuan pelanggan dengan pengalaman perjalanan terbaik.</p>
             </div>
             <div class="reason-box">
-                <div class="circle-icon">&#128077;</div>
-                <h4>Harga Terbaik</h4>
+                <div class="circle-icon"><img src="assets/icons/IconKalender.png" alt="" class="reason-icon-img"></div>
+                <h4>Harga Terjangkau</h4>
                 <p>Harga kompetitif dengan kualitas layanan dan fasilitas terbaik.</p>
             </div>
             <div class="reason-box">
-                <div class="circle-icon">&#128506;</div>
+                <div class="circle-icon"><img src="assets/icons/IconGunung.png" alt="" class="reason-icon-img"></div>
                 <h4>Paket Lengkap</h4>
                 <p>Paket perjalanan lengkap mulai dari transportasi, akomodasi, hingga itinerary.</p>
             </div>
             <div class="reason-box">
-                <div class="circle-icon">&#127942;</div>
+                <div class="circle-icon"><img src="assets/icons/IconHeadphone.png" alt="" class="reason-icon-img"></div>
                 <h4>Tim Profesional</h4>
                 <p>Didukung oleh tim profesional dan berpengalaman di bidang pariwisata.</p>
             </div>
@@ -681,7 +685,7 @@
         </div>
         <div class="form-card">
             <div class="form-container">
-                <form action="" method="POST">
+                <form action="" method="POST" id="saranForm">
                     <input type="text" name="nama" placeholder="Nama Lengkap" required>
                     <input type="email" name="email" placeholder="Alamat Email" required>
                     <textarea name="pesan" rows="5" placeholder="Tuliskan pengalaman atau saranmu untuk ZGentara Trip..." required></textarea>
@@ -725,7 +729,7 @@
             <h4>MENU</h4>
             <ul>
                 <li><a href="#hero">Beranda</a></li>
-                <li><a href="#booking-trip">Booking</a></li>
+                <li><a href="#jastrip">Booking</a></li>
                 <li><a href="#testimoni">Testimoni</a></li>
                 <li><a href="#tentang">Tentang Kami</a></li>
             </ul>
@@ -763,7 +767,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const guides = {
         'Kawah Ijen': {
-            name: 'Alfaro',
+            name: 'ALFARO',
             role: 'Mountain Guide',
             phone: '6287781896510',
             photo: 'assets/images/foto1.png',
@@ -771,79 +775,79 @@ document.addEventListener('DOMContentLoaded', function () {
             bookedDates: ['2026-05-19', '2026-05-23', '2026-05-30', '2026-06-07', '2026-06-14', '2026-07-05']
         },
         'Blue Fire Ijen': {
-            name: 'Alfaro',
-            role: 'Mountain Guide',
-            phone: '6287781896510',
-            photo: 'assets/images/foto1.png',
+            name: 'IHSAN',
+            role: 'Adventure Guide',
+            phone: '6285854655200',
+            photo: 'assets/images/foto2.png',
             image: 'assets/images/BlueFireIjenBondowoso.png',
             bookedDates: ['2026-05-19', '2026-05-23', '2026-05-30', '2026-06-07', '2026-06-14', '2026-07-05']
         },
         'Gunung Raung': {
-            name: 'Rizky Pratama',
-            role: 'Adventure Guide',
-            phone: '6285854655200',
-            photo: 'assets/images/foto2.png',
+            name: 'ALFARO',
+            role: 'Mountain Guide',
+            phone: '6287781896510',
+            photo: 'assets/images/foto1.png',
             image: 'assets/images/GunungRaung.png',
             bookedDates: ['2026-05-18', '2026-05-22', '2026-05-29', '2026-06-03', '2026-06-17', '2026-07-08']
         },
         'Gunung Piramida': {
-            name: 'Bima A.',
-            role: 'Ridge Guide',
-            phone: '6282237774608',
-            photo: 'assets/images/foto3.png',
+            name: 'IHSAN',
+            role: 'Adventure Guide',
+            phone: '6285854655200',
+            photo: 'assets/images/foto2.png',
             image: 'assets/images/GunungPiramidaBondowoso.png',
             bookedDates: ['2026-05-21', '2026-05-28', '2026-06-04', '2026-06-15', '2026-06-24', '2026-07-12']
         },
         'Gunung Rante': {
-            name: 'Hendra Wijaya',
-            role: 'Summit Guide',
-            phone: '6287781896510',
-            photo: 'assets/images/foto1.png',
+            name: 'MAHSUM',
+            role: 'Nature Explorer',
+            phone: '6282237774608',
+            photo: 'assets/images/foto3.png',
             image: 'assets/images/GunungRante.png',
             bookedDates: ['2026-05-17', '2026-05-24', '2026-06-08', '2026-06-18', '2026-07-03']
         },
         'Kawah Wurung': {
-            name: 'Salsa Kirana',
-            role: 'Healing Trip Guide',
-            phone: '6285707035170',
-            photo: 'assets/images/foto4.png',
+            name: 'MAHSUM',
+            role: 'Nature Explorer',
+            phone: '6282237774608',
+            photo: 'assets/images/foto3.png',
             image: 'assets/images/KawahWurung.png',
             bookedDates: ['2026-05-20', '2026-05-27', '2026-06-09', '2026-06-19', '2026-07-10']
         },
         'Bukit Teletubbies': {
-            name: 'Nabila Putri',
-            role: 'Nature Guide',
+            name: 'DARA',
+            role: 'Trip Navigator',
             phone: '6285707035170',
             photo: 'assets/images/foto4.png',
             image: 'assets/images/BukitTeletubbies.png',
             bookedDates: ['2026-05-22', '2026-06-08', '2026-06-18', '2026-07-09']
         },
         'Niagara Mini': {
-            name: 'Aulia Rahma',
-            role: 'Family Trip Guide',
-            phone: '6285731348852',
-            photo: 'assets/images/foto5.png',
+            name: 'DARA',
+            role: 'Trip Navigator',
+            phone: '6285707035170',
+            photo: 'assets/images/foto4.png',
             image: 'assets/images/NiagaraMiniBondowoso.png',
             bookedDates: ['2026-05-24', '2026-05-31', '2026-06-06', '2026-06-20', '2026-07-11']
         },
         'Air Terjun Tancak Kembar': {
-            name: 'Fajar Mahendra',
-            role: 'Waterfall Guide',
+            name: 'REGITA',
+            role: 'Camping Specialist',
             phone: '6285731348852',
             photo: 'assets/images/foto5.png',
             image: 'assets/images/AirTerjunTancakKembar.png',
             bookedDates: ['2026-05-17', '2026-05-24', '2026-06-06', '2026-06-20', '2026-07-18']
         },
         'Bukit Megasari': {
-            name: 'Regita',
-            role: 'Golden Hour Guide',
+            name: 'REGITA',
+            role: 'Camping Specialist',
             phone: '6285731348852',
             photo: 'assets/images/foto5.png',
             image: 'assets/images/BukitMegasariParalayang.png',
             bookedDates: ['2026-05-31', '2026-06-06', '2026-06-20', '2026-07-04']
         },
         "Batu So'on": {
-            name: 'Regita',
+            name: 'REGITA',
             role: 'Photo Spot Guide',
             phone: '6285731348852',
             photo: 'assets/images/foto5.png',
@@ -875,6 +879,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const guidePhoto = document.getElementById('bookingGuidePhoto');
     const guideName = document.getElementById('bookingGuideName');
     const guidePhone = document.getElementById('bookingGuidePhone');
+    const searchForm = document.querySelector('.css-filter-panel');
+    const searchInput = document.querySelector('.search-input');
+    const destinationCards = Array.from(document.querySelectorAll('.destination-card-grid .trip-card'));
+    const destinationEmpty = document.getElementById('destinationEmptyMessage');
+    const destinationFilters = Array.from(document.querySelectorAll('.destination-filter-toggle'));
+    const saranForm = document.getElementById('saranForm');
 
     function pad(value) {
         return String(value).padStart(2, '0');
@@ -898,6 +908,52 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function currentGuide() {
         return guides[selectedTrip] || guides['Kawah Ijen'];
+    }
+
+    function normalizeText(value) {
+        return (value || '').toLowerCase().trim();
+    }
+
+    function activeCategory() {
+        const selected = document.querySelector('.destination-filter-toggle:checked');
+        return selected ? selected.id : 'filter-all';
+    }
+
+    function cardMatchesCategory(card, category) {
+        if (category === 'filter-hardcore') {
+            return card.classList.contains('vibe-hardcore');
+        }
+        if (category === 'filter-chill') {
+            return card.classList.contains('vibe-chill');
+        }
+        if (category === 'filter-golden') {
+            return card.classList.contains('vibe-golden');
+        }
+        return true;
+    }
+
+    function filterDestinations() {
+        const query = normalizeText(searchInput ? searchInput.value : '');
+        const category = activeCategory();
+        let visibleCount = 0;
+
+        destinationCards.forEach(function (card) {
+            if (query === '') {
+                card.style.removeProperty('display');
+                return;
+            }
+
+            const text = normalizeText(card.textContent);
+            const isMatch = text.includes(query) && cardMatchesCategory(card, category);
+            card.style.setProperty('display', isMatch ? 'block' : 'none', 'important');
+            if (isMatch) {
+                visibleCount++;
+            }
+        });
+
+        if (destinationEmpty) {
+            destinationEmpty.classList.toggle('is-visible', query !== '' && visibleCount === 0);
+        }
     }
 
     function updateGuidePreview(imageOverride) {
@@ -1032,6 +1088,22 @@ document.addEventListener('DOMContentLoaded', function () {
         button.addEventListener('click', closeBooking);
     });
 
+    if (searchForm && searchInput) {
+        const urlSearch = new URLSearchParams(window.location.search).get('search');
+        if (urlSearch) {
+            searchInput.value = urlSearch;
+        }
+        searchForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+            filterDestinations();
+        });
+        searchInput.addEventListener('input', filterDestinations);
+        destinationFilters.forEach(function (filter) {
+            filter.addEventListener('change', filterDestinations);
+        });
+        filterDestinations();
+    }
+
     tripSelect.addEventListener('change', function () {
         selectedTrip = tripSelect.value;
         selectedDate = '';
@@ -1072,43 +1144,71 @@ document.addEventListener('DOMContentLoaded', function () {
         const guide = currentGuide();
         const name = document.getElementById('bookingName').value.trim();
         const city = document.getElementById('bookingCity').value;
+        const whatsapp = document.getElementById('bookingWhatsapp').value.trim();
         const address = document.getElementById('bookingAddress').value.trim();
-        const participants = document.getElementById('bookingParticipants').value;
-        const note = document.getElementById('bookingNote').value.trim() || '-';
+        const packageName = document.getElementById('bookingPackage').value;
         const message = [
-            'Halo ' + guide.name,
+            'Halo Guide ' + guide.name,
             '',
-            'Saya ingin booking trip:',
+            'Saya ingin melakukan booking trip.',
             '',
-            '====================',
+            'Data Booking:',
+            '',
             'Nama:',
             name,
             '',
             'Domisili:',
             city,
             '',
-            'Alamat:',
-            address,
+            'Nomor WhatsApp:',
+            whatsapp,
             '',
             'Wisata:',
             selectedTrip,
             '',
+            'Paket:',
+            packageName,
+            '',
             'Tanggal:',
             formatDate(selectedDate),
             '',
-            'Peserta:',
-            participants,
+            'Alamat:',
+            address,
             '',
-            'Catatan:',
-            note,
-            '====================',
-            '',
-            'Guide tujuan:',
-            guide.name
+            'Mohon informasi lebih lanjut \uD83D\uDE4C'
         ].join('\n');
 
         window.open('https://wa.me/' + guide.phone + '?text=' + encodeURIComponent(message), '_blank', 'noopener');
     });
+
+    if (saranForm) {
+        saranForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            if (!saranForm.checkValidity()) {
+                saranForm.reportValidity();
+                return;
+            }
+
+            const formData = new FormData(saranForm);
+            const message = [
+                'Halo Admin Gantara Trip',
+                '',
+                'Saya ingin memberikan saran/kritik.',
+                '',
+                'Nama:',
+                formData.get('nama'),
+                '',
+                'Email:',
+                formData.get('email'),
+                '',
+                'Pesan:',
+                formData.get('pesan')
+            ].join('\n');
+
+            window.open('https://wa.me/6287781896510?text=' + encodeURIComponent(message), '_blank', 'noopener');
+        });
+    }
 
     document.addEventListener('keydown', function (event) {
         if (event.key === 'Escape' && bookingModal.classList.contains('active')) {

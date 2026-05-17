@@ -21,7 +21,7 @@ $assetBase = $data['asset_base'] ?? '../assets';
             <h4>MENU</h4>
             <ul>
                 <li><a href="#hero">Beranda</a></li>
-                <li><a href="#booking-trip">Booking</a></li>
+                <li><a href="#jastrip">Booking</a></li>
                 <li><a href="#testimoni">Testimoni</a></li>
                 <li><a href="#tentang">Tentang Kami</a></li>
             </ul>

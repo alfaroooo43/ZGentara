@@ -14,7 +14,7 @@ $assetBase = $data['asset_base'] ?? '../assets';
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://zgentara.vercel.app/">
     <link rel="icon" type="image/png" href="<?= htmlspecialchars($assetBase); ?>/icons/LogoZGentara.png">
-    <link rel="stylesheet" href="<?= htmlspecialchars($assetBase); ?>/css/style.css?v=20260525">
+    <link rel="stylesheet" href="<?= htmlspecialchars($assetBase); ?>/css/style.css?v=20260526">
 </head>
 <body>
 
@@ -31,7 +31,7 @@ $assetBase = $data['asset_base'] ?? '../assets';
         <nav class="navbar" aria-label="Navigasi utama">
             <ul class="nav-menu">
                 <li><a href="#hero"><span class="nav-home">&#8962;</span> BERANDA</a></li>
-                <li><a href="#booking-trip">BOOKING</a></li>
+                <li><a href="#jastrip">BOOKING</a></li>
                 <li><a href="#testimoni">TESTIMONI</a></li>
                 <li><a href="#tentang">TENTANG</a></li>
             </ul>

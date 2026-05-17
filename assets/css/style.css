@@ -618,6 +618,15 @@ textarea {
     box-shadow: var(--soft-shadow);
 }
 
+.destination-empty-message {
+    display: none;
+    margin-top: 20px;
+}
+
+.destination-empty-message.is-visible {
+    display: block;
+}
+
 .action-center {
     margin-top: 30px;
     text-align: center;
@@ -680,6 +689,14 @@ textarea {
     color: var(--white);
     box-shadow: var(--soft-shadow);
     font-size: 1.45rem;
+}
+
+.reason-icon-img {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+    display: block;
+    filter: brightness(0) invert(1);
 }
 
 .reason-box h4 {
@@ -2873,6 +2890,13 @@ body.booking-modal-open {
 
 .premium-booking-form .booking-field textarea {
     min-height: 92px;
+}
+
+.premium-booking-form input[readonly] {
+    background: var(--green-soft);
+    color: var(--green-dark);
+    cursor: not-allowed;
+    font-weight: 850;
 }
 
 .booking-date-controls {

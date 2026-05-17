@@ -168,7 +168,7 @@ $bookingGuides = [
         'role' => 'Mountain Guide',
         'phone' => '6287781896510',
         'photo' => 'foto1.png',
-        'trips' => ['Kawah Ijen', 'Blue Fire Ijen'],
+        'trips' => ['Kawah Ijen', 'Gunung Raung'],
         'fullDates' => ['2026-05-01', '2026-05-09', '2026-05-19', '2026-05-23', '2026-05-30', '2026-06-07', '2026-06-14', '2026-06-21']
     ],
     [
@@ -177,7 +177,7 @@ $bookingGuides = [
         'role' => 'Adventure Guide',
         'phone' => '6285854655200',
         'photo' => 'foto2.png',
-        'trips' => ['Gunung Raung', 'Gunung Piramida'],
+        'trips' => ['Blue Fire Ijen', 'Gunung Piramida'],
         'fullDates' => ['2026-05-05', '2026-05-12', '2026-05-18', '2026-05-22', '2026-05-29', '2026-06-03', '2026-06-17', '2026-06-26']
     ],
     [
@@ -399,12 +399,44 @@ $bookingPackages = [
                         <label for="bookingCity">Domisili</label>
                         <select id="bookingCity" name="domisili" required>
                             <option value="">Pilih Domisili</option>
-                            <option>Bondowoso</option>
+                            <option>Bangkalan</option>
                             <option>Banyuwangi</option>
+                            <option>Batu</option>
+                            <option>Blitar</option>
+                            <option>Bojonegoro</option>
+                            <option>Bondowoso</option>
+                            <option>Gresik</option>
                             <option>Jember</option>
-                            <option>Situbondo</option>
-                            <option>Surabaya</option>
+                            <option>Jombang</option>
+                            <option>Kediri</option>
+                            <option>Kota Blitar</option>
+                            <option>Kota Kediri</option>
+                            <option>Kota Madiun</option>
+                            <option>Kota Malang</option>
+                            <option>Kota Mojokerto</option>
+                            <option>Kota Pasuruan</option>
+                            <option>Kota Probolinggo</option>
+                            <option>Lamongan</option>
+                            <option>Lumajang</option>
+                            <option>Madiun</option>
+                            <option>Magetan</option>
                             <option>Malang</option>
+                            <option>Mojokerto</option>
+                            <option>Nganjuk</option>
+                            <option>Ngawi</option>
+                            <option>Pacitan</option>
+                            <option>Pamekasan</option>
+                            <option>Pasuruan</option>
+                            <option>Ponorogo</option>
+                            <option>Probolinggo</option>
+                            <option>Sampang</option>
+                            <option>Sidoarjo</option>
+                            <option>Situbondo</option>
+                            <option>Sumenep</option>
+                            <option>Surabaya</option>
+                            <option>Trenggalek</option>
+                            <option>Tuban</option>
+                            <option>Tulungagung</option>
                             <option>Luar Jawa Timur</option>
                         </select>
                     </div>
@@ -528,22 +560,22 @@ $bookingPackages = [
 
         <div class="reason-grid">
             <div class="reason-box">
-                <div class="circle-icon">&#128101;</div>
+                <div class="circle-icon"><img src="<?= htmlspecialchars($assetBase); ?>/icons/IconPelindung.png" alt="" class="reason-icon-img"></div>
                 <h4>Berpengalaman</h4>
                 <p>Kami telah melayani ribuan pelanggan dengan pengalaman perjalanan terbaik.</p>
             </div>
             <div class="reason-box">
-                <div class="circle-icon">&#128077;</div>
-                <h4>Harga Terbaik</h4>
+                <div class="circle-icon"><img src="<?= htmlspecialchars($assetBase); ?>/icons/IconKalender.png" alt="" class="reason-icon-img"></div>
+                <h4>Harga Terjangkau</h4>
                 <p>Harga kompetitif dengan kualitas layanan dan fasilitas terbaik.</p>
             </div>
             <div class="reason-box">
-                <div class="circle-icon">&#128506;</div>
+                <div class="circle-icon"><img src="<?= htmlspecialchars($assetBase); ?>/icons/IconGunung.png" alt="" class="reason-icon-img"></div>
                 <h4>Paket Lengkap</h4>
                 <p>Paket perjalanan lengkap mulai dari transportasi, akomodasi, hingga itinerary.</p>
             </div>
             <div class="reason-box">
-                <div class="circle-icon">&#127942;</div>
+                <div class="circle-icon"><img src="<?= htmlspecialchars($assetBase); ?>/icons/IconHeadphone.png" alt="" class="reason-icon-img"></div>
                 <h4>Tim Profesional</h4>
                 <p>Didukung oleh tim profesional dan berpengalaman di bidang pariwisata.</p>
             </div>
@@ -650,7 +682,7 @@ $bookingPackages = [
         </div>
         <div class="form-card">
             <div class="form-container">
-                <form action="" method="POST">
+                <form action="" method="POST" id="saranForm">
                     <input type="text" name="nama" placeholder="Nama Lengkap" required>
                     <input type="email" name="email" placeholder="Alamat Email" required>
                     <textarea name="pesan" rows="5" placeholder="Tuliskan pengalaman atau saranmu untuk ZGentara Trip..." required></textarea>

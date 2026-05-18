@@ -827,18 +827,18 @@ document.addEventListener('DOMContentLoaded', function () {
             bookedDates: ['2026-05-19', '2026-05-23', '2026-05-30', '2026-06-07', '2026-06-14', '2026-07-05']
         },
         'Blue Fire Ijen': {
-            name: 'IHSAN',
-            role: 'Adventure Guide',
-            phone: '6285854655200',
-            photo: 'assets/images/foto2.png',
-            image: 'assets/images/BlueFireIjenBondowoso.png',
-            bookedDates: ['2026-05-19', '2026-05-23', '2026-05-30', '2026-06-07', '2026-06-14', '2026-07-05']
-        },
-        'Gunung Raung': {
             name: 'ALFARO',
             role: 'Mountain Guide',
             phone: '6287781896510',
             photo: 'assets/images/foto1.png',
+            image: 'assets/images/BlueFireIjenBondowoso.png',
+            bookedDates: ['2026-05-19', '2026-05-23', '2026-05-30', '2026-06-07', '2026-06-14', '2026-07-05']
+        },
+        'Gunung Raung': {
+            name: 'IHSAN',
+            role: 'Adventure Guide',
+            phone: '6285854655200',
+            photo: 'assets/images/foto2.png',
             image: 'assets/images/GunungRaung.png',
             bookedDates: ['2026-05-18', '2026-05-22', '2026-05-29', '2026-06-03', '2026-06-17', '2026-07-08']
         },
@@ -1229,11 +1229,8 @@ document.addEventListener('DOMContentLoaded', function () {
             'Paket:',
             packageName,
             '',
-            'Tanggal:',
+            'Tanggal Booking:',
             formatDate(selectedDate),
-            '',
-            'Alamat:',
-            address,
             '',
             'Mohon informasi lebih lanjut \uD83D\uDE4C'
         ].join('\n');
@@ -1253,9 +1250,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
             const formData = new FormData(saranForm);
             const message = [
-                'Halo Admin Gantara Trip',
+                'Halo Admin ZGentara Trip',
                 '',
                 'Saya ingin memberikan saran/kritik.',
+                '',
+                'Data:',
                 '',
                 'Nama:',
                 formData.get('nama'),

@@ -191,7 +191,7 @@ $bookingGuides = [
         'role' => 'Mountain Guide',
         'phone' => '6287781896510',
         'photo' => 'foto1.png',
-        'trips' => ['Kawah Ijen', 'Gunung Raung'],
+        'trips' => ['Kawah Ijen', 'Blue Fire Ijen'],
         'fullDates' => ['2026-05-01', '2026-05-09', '2026-05-19', '2026-05-23', '2026-05-30', '2026-06-07', '2026-06-14', '2026-06-21']
     ],
     [
@@ -200,7 +200,7 @@ $bookingGuides = [
         'role' => 'Adventure Guide',
         'phone' => '6285854655200',
         'photo' => 'foto2.png',
-        'trips' => ['Blue Fire Ijen', 'Gunung Piramida'],
+        'trips' => ['Gunung Raung', 'Gunung Piramida'],
         'fullDates' => ['2026-05-05', '2026-05-12', '2026-05-18', '2026-05-22', '2026-05-29', '2026-06-03', '2026-06-17', '2026-06-26']
     ],
     [
@@ -500,14 +500,8 @@ $bookingPackages = [
                 <div class="booking-step" data-step="2">
                     <h3>Detail Event</h3>
                     <div class="booking-field">
-                        <label for="bookingTrip">Pilih Wisata</label>
-                        <select id="bookingTrip" name="wisata" required>
-                            <option value="">Pilih Wisata</option>
-                            <?php foreach ($bookingTrips as $tripName) : ?>
-                                <?php $tripOptionImage = $destinationImageMap[$tripName] ?? 'KawahWurung.png'; ?>
-                                <option value="<?= htmlspecialchars($tripName); ?>" data-image="<?= htmlspecialchars($assetBase); ?>/images/<?= htmlspecialchars($tripOptionImage); ?>"><?= htmlspecialchars($tripName); ?></option>
-                            <?php endforeach; ?>
-                        </select>
+                        <label for="bookingTrip">Wisata Terkunci</label>
+                        <input type="text" id="bookingTrip" name="wisata" value="Kawah Ijen" data-image="<?= htmlspecialchars($assetBase); ?>/images/BlueFireIjenBondowoso.png" readonly required>
                     </div>
                     <div class="booking-field">
                         <label for="bookingGuide">Guide Otomatis</label>
@@ -886,6 +880,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.body.classList.add('booking-modal-open');
         if (tripName) {
             tripSelect.value = tripName;
+            tripSelect.dataset.image = imageUrl || tripSelect.dataset.image || '';
             updateGuideOptions(imageUrl);
         }
         showStep(1);
@@ -920,8 +915,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function updateSelectedPreview(imageOverride) {
         const selectedTrip = tripSelect.value;
         const selectedGuide = getSelectedGuide();
-        const selectedOption = tripSelect.options[tripSelect.selectedIndex];
-        const imageUrl = imageOverride || (selectedOption ? selectedOption.dataset.image : '');
+        const imageUrl = imageOverride || tripSelect.dataset.image || '';
 
         tripTitle.textContent = selectedTrip || 'Pilih Wisata';
         if (imageUrl) {
@@ -1202,9 +1196,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
             const formData = new FormData(saranForm);
             const message = [
-                'Halo Admin Gantara Trip',
+                'Halo Admin ZGentara Trip',
                 '',
                 'Saya ingin memberikan saran/kritik.',
+                '',
+                'Data:',
                 '',
                 'Nama:',
                 formData.get('nama'),

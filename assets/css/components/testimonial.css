@@ -1,0 +1,167 @@
+/* #CONTOH TESTIMONIAL STYLE */
+.feature-grid,
+.card-grid,
+.reason-grid,
+.testi-grid,
+.team-grid {
+    display: grid;
+    gap: 24px;
+}
+
+/* #CONTOH TESTIMONI GRID */
+
+.testimonial-section,
+.about-section,
+.form-section {
+    background: var(--cream);
+}
+
+.testi-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: 1060px;
+    margin: 0 auto;
+}
+
+.testimonial-toggle-checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.testi-card,
+.team-card,
+.form-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--white);
+    box-shadow: var(--soft-shadow);
+}
+
+.testi-card {
+    min-height: 220px;
+    padding: 30px;
+    animation: testimonialFade 0.36s ease both;
+}
+
+.testimonial-toggle-checkbox:not(:checked) ~ .testi-grid .testi-card:nth-of-type(n+6) {
+    display: none;
+}
+
+.testimonial-toggle-checkbox:checked ~ .testi-grid .testi-card:nth-of-type(n+6) {
+    display: block;
+    animation: testimonialReveal 0.42s ease both;
+}
+
+.testimonial-action {
+    margin-top: 30px;
+}
+
+.btn-testimonial-toggle {
+    user-select: none;
+}
+
+.toggle-label-less {
+    display: none;
+}
+
+.testimonial-toggle-checkbox:checked ~ .testimonial-action .toggle-label-more {
+    display: none;
+}
+
+.testimonial-toggle-checkbox:checked ~ .testimonial-action .toggle-label-less {
+    display: inline;
+}
+
+@keyframes testimonialFade {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes testimonialReveal {
+    from {
+        opacity: 0;
+        transform: translateY(18px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.quote-mark {
+    display: block;
+    color: var(--green);
+    font-size: 2.2rem;
+    line-height: 1;
+    font-weight: 900;
+}
+
+.quote {
+    min-height: 92px;
+    margin: 4px 0 14px;
+}
+
+.testi-trip {
+    min-height: 30px;
+    margin-bottom: 18px;
+    padding: 6px 12px;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    background: var(--green-soft);
+    color: var(--green-dark);
+    font-size: 0.76rem;
+    font-weight: 850;
+}
+
+.client-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar {
+    width: 44px;
+    height: 44px;
+    background: var(--green-soft);
+    color: var(--green-dark);
+}
+
+.client-info h4 {
+    font-size: 0.92rem;
+}
+
+.client-info span:not(.stars-right) {
+    color: var(--muted);
+    font-size: 0.78rem;
+}
+
+.stars-right {
+    margin-left: auto;
+    white-space: nowrap;
+}
+
+.feature-grid,
+.card-grid,
+.reason-grid,
+.testi-grid,
+.team-grid {
+    gap: 20px;
+}
+
+.testi-grid {
+    max-width: 1100px;
+}
+
+.testi-card {
+    min-height: 205px;
+    padding: 26px;
+}

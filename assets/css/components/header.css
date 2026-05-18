@@ -1,0 +1,138 @@
+/* #CONTOH NAVBAR STYLE */
+
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    background: rgba(5, 65, 42, 0.96);
+    border-bottom: 1px solid rgba(199, 165, 91, 0.28);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+    backdrop-filter: blur(10px);
+}
+
+.header-container {
+    width: min(100% - 42px, var(--container));
+    min-height: 86px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    color: var(--white);
+}
+
+.brand-logos {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    flex: 0 0 auto;
+}
+
+.brand-logo-img {
+    width: auto;
+    height: 42px;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.18));
+}
+
+.brand-logo-bondowoso {
+    height: 40px;
+}
+
+.brand-text {
+    color: var(--white);
+    font-size: 1.28rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+}
+
+.navbar {
+    flex: 1;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 24px;
+}
+
+.nav-menu a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    min-height: 40px;
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.03em;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--gold);
+    transform: translateY(-1px);
+}
+
+.nav-home {
+    font-size: 1.1rem;
+}
+
+.header-btn {
+    display: flex;
+    align-items: center;
+}
+
+.btn-outline-framed {
+    min-height: 42px;
+    padding: 10px 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    border-radius: 999px;
+    color: var(--white);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.03em;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+}
+
+.btn-outline-framed:hover {
+    border-color: var(--gold);
+    background: var(--gold);
+}
+
+.header-container {
+    min-height: 80px;
+    gap: 18px;
+}
+
+.brand-logo-img {
+    height: 44px;
+}
+
+.brand-logo-bondowoso {
+    height: 42px;
+}
+
+.nav-menu {
+    gap: 19px;
+}
+
+.nav-menu a {
+    font-size: 0.84rem;
+    font-weight: 850;
+}

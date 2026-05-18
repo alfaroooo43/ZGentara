@@ -1,0 +1,224 @@
+/* #CONTOH UTILITIES STYLE */
+﻿:root {
+    --green-dark: #06462d;
+    --green: #0f6b45;
+    --green-soft: #eaf3ee;
+    --gold: #c7a55b;
+    --cream: #f7f7f2;
+    --white: #ffffff;
+    --text: #153326;
+    --muted: #6f7d76;
+    --border: #e8eee9;
+    --shadow: 0 16px 35px rgba(18, 61, 43, 0.12);
+    --soft-shadow: 0 8px 24px rgba(18, 61, 43, 0.08);
+    --radius: 14px;
+    --container: 1180px;
+}
+
+/* #CONTOH BASE STYLE */
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-width: 320px;
+    overflow-x: hidden;
+    background: var(--cream);
+    color: var(--text);
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+/* #CONTOH SECTION STYLE */
+
+.section-header {
+    max-width: 720px;
+    margin: 0 auto 34px;
+    text-align: center;
+}
+
+.title-line {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    color: var(--green-dark);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.35rem, 2vw, 1.85rem);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+}
+
+.title-line::before,
+.title-line::after {
+    content: "";
+    width: 54px;
+    height: 1px;
+    display: inline-block;
+    background: rgba(6, 70, 45, 0.36);
+}
+
+.subtitle {
+    max-width: 520px;
+    margin: 12px auto 0;
+    color: var(--muted);
+    font-size: 0.93rem;
+}
+
+.feature-card {
+    min-height: 162px;
+    padding: 28px 22px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--white);
+    box-shadow: var(--soft-shadow);
+    text-align: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+}
+
+.circle-icon,
+.avatar,
+.headphone {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.feature-icon-circle {
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+    background: #f4faf6;
+    border: 1px solid rgba(16, 95, 70, 0.10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+    box-shadow: 0 4px 15px rgba(16, 95, 70, 0.06);
+    overflow: hidden;
+}
+
+.feature-icon-img {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    display: block;
+    max-width: none;
+    transform: scale(3.7);
+    transform-origin: center;
+}
+
+.feature-card h4 {
+    margin-bottom: 8px;
+    font-size: 0.92rem;
+    font-weight: 850;
+}
+
+/* #CONTOH RESTORE PREMIUM LAYOUT */
+
+.brand-text {
+    font-size: 1.34rem;
+    font-weight: 900;
+}
+
+.btn-outline-framed {
+    min-height: 42px;
+    padding: 10px 19px;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+}
+
+.section-header {
+    margin-bottom: 28px;
+}
+
+.title-line {
+    font-size: clamp(1.58rem, 2.25vw, 2rem);
+    line-height: 1.14;
+}
+
+.subtitle {
+    margin-top: 10px;
+    font-size: 0.96rem;
+    line-height: 1.55;
+}
+
+.feature-card {
+    min-height: 154px;
+    padding: 24px 20px;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    font-size: 1.15rem;
+    font-weight: 900;
+}
+
+.action-center {
+    margin-top: 24px;
+}
+
+.btn-primary-green,
+.btn-white,
+.btn-gold-cta {
+    min-height: 46px;
+    padding: 12px 25px;
+    font-size: 0.84rem;
+    box-shadow: 0 14px 30px rgba(7, 79, 51, 0.18);
+}
+
+.promo-banner {
+    min-height: 250px;
+    padding: 40px 50px;
+    gap: 28px;
+}
+
+.promo-info h2 {
+    font-size: clamp(1.95rem, 3vw, 2.75rem);
+}
+
+.quote {
+    min-height: 76px;
+    margin-bottom: 12px;
+}
+
+.cta-banner {
+    padding-bottom: 28px;
+}
+
+.cta-inner {
+    padding: 20px 26px;
+}

@@ -1,0 +1,134 @@
+/* #CONTOH FOOTER STYLE */
+.section-shell,
+.cta-inner,
+.footer-container,
+.footer-copyright {
+    width: min(100%, var(--container));
+    margin: 0 auto;
+}
+
+/* #CONTOH FOOTER STYLE */
+
+.site-footer {
+    padding: 46px 20px 24px;
+    background: var(--green-dark);
+    color: rgba(255, 255, 255, 0.74);
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 1.6fr 0.8fr 1.2fr;
+    gap: 34px;
+    margin-bottom: 32px;
+}
+
+.footer-brand-col h3 {
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--white);
+    font-size: 1.1rem;
+    letter-spacing: 0.06em;
+}
+
+.footer-brand-logos {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    flex: 0 0 auto;
+}
+
+.footer-logo-img {
+    width: auto;
+    height: 38px;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.16));
+}
+
+.footer-logo-bondowoso {
+    height: 36px;
+}
+
+.footer-brand-col p,
+.footer-col li,
+.contact-col p {
+    font-size: 0.86rem;
+}
+
+.footer-col h4 {
+    margin-bottom: 14px;
+    color: var(--white);
+    font-size: 0.86rem;
+    letter-spacing: 0.06em;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col li,
+.contact-col p {
+    margin-bottom: 8px;
+}
+
+.contact-address {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.footer-col a,
+.legal-links a {
+    color: rgba(255, 255, 255, 0.74);
+    transition: color 0.25s ease;
+}
+
+.footer-col a:hover,
+.legal-links a:hover {
+    color: var(--gold);
+}
+
+.footer-copyright {
+    padding-top: 18px;
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+    color: rgba(255, 255, 255, 0.62);
+    font-size: 0.8rem;
+}
+
+.site-footer {
+    padding: 40px 20px 22px;
+}
+
+.footer-container {
+    gap: 26px;
+    margin-bottom: 26px;
+}
+
+.site-footer .footer-container {
+    grid-template-columns: 1.6fr 0.8fr 1.2fr;
+}
+
+.footer-brand-col h3 {
+    margin-bottom: 10px;
+    font-size: 1.15rem;
+}
+
+.footer-brand-col p,
+.footer-col li,
+.contact-col p,
+.footer-copyright {
+    font-size: 0.9rem;
+    line-height: 1.58;
+}
+
+.footer-logo-img {
+    height: 40px;
+}
+
+.footer-logo-bondowoso {
+    height: 38px;
+}

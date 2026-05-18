@@ -1,10 +1,23 @@
+/* ========================================
+   GUIDE DAN TENTANG KAMI
+   Styling section alasan memilih, tentang kami,
+   dekorasi daun, team guide, dan tombol guide.
+======================================== */
 /* #CONTOH GUIDE STYLE */
+/* ========================================
+   GUIDE SECTION SPACING
+   Mengatur lebar dan padding section tentang/why agar konsisten.
+======================================== */
 .section-container,
 .why-section {
     width: 100%;
     padding: 68px 20px;
 }
 
+/* ========================================
+   GUIDE / ABOUT COMPONENT
+   Mengatur section tentang, alasan memilih, dekorasi daun, card guide, dan daftar wisata guide.
+======================================== */
 .leaf-icon {
     width: 34px;
     height: 34px;
@@ -14,6 +27,10 @@
     justify-content: center;
 }
 
+/* ========================================
+   GUIDE / ABOUT COMPONENT
+   Mengatur section tentang, alasan memilih, dekorasi daun, card guide, dan daftar wisata guide.
+======================================== */
 .leaf-icon img {
     width: 100%;
     height: 100%;
@@ -21,11 +38,19 @@
     filter: sepia(0.55) saturate(1.35) hue-rotate(352deg) brightness(0.96) drop-shadow(0 4px 10px rgba(199, 165, 91, 0.2));
 }
 
+/* ========================================
+   GUIDE / ABOUT COMPONENT
+   Mengatur section tentang, alasan memilih, dekorasi daun, card guide, dan daftar wisata guide.
+======================================== */
 .feature-grid,
 .reason-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+/* ========================================
+   GUIDE / ABOUT COMPONENT
+   Mengatur section tentang, alasan memilih, dekorasi daun, card guide, dan daftar wisata guide.
+======================================== */
 .feature-card h4,
 .reason-box h4,
 .team-card h4,
@@ -34,6 +59,10 @@
     line-height: 1.3;
 }
 
+/* ========================================
+   TESTIMONIAL COMPONENT
+   Mengatur card review, rating bintang, avatar, toggle lihat semua, dan animasi testimoni.
+======================================== */
 .feature-card p,
 .reason-box p,
 .card-content p,
@@ -43,6 +72,10 @@
     font-size: 0.9rem;
 }
 
+/* ========================================
+   GUIDE / ABOUT COMPONENT
+   Mengatur section tentang, alasan memilih, dekorasi daun, card guide, dan daftar wisata guide.
+======================================== */
 .why-section {
     position: relative;
     overflow: hidden;
@@ -53,20 +86,36 @@
         #eef4ef;
 }
 
+/* ========================================
+   GUIDE / ABOUT COMPONENT
+   Mengatur section tentang, alasan memilih, dekorasi daun, card guide, dan daftar wisata guide.
+======================================== */
 .why-section .section-shell {
     position: relative;
     z-index: 2;
 }
 
+/* ========================================
+   GUIDE / ABOUT COMPONENT
+   Mengatur section tentang, alasan memilih, dekorasi daun, card guide, dan daftar wisata guide.
+======================================== */
 .reason-grid {
     margin-bottom: 64px;
 }
 
+/* ========================================
+   GUIDE / ABOUT COMPONENT
+   Mengatur section tentang, alasan memilih, dekorasi daun, card guide, dan daftar wisata guide.
+======================================== */
 .reason-box {
     padding: 12px 18px;
     text-align: center;
 }
 
+/* ========================================
+   GUIDE / ABOUT COMPONENT
+   Mengatur section tentang, alasan memilih, dekorasi daun, card guide, dan daftar wisata guide.
+======================================== */
 .reason-icon-img {
     width: 34px;
     height: 34px;
@@ -75,11 +124,19 @@
     filter: brightness(0) invert(1);
 }
 
+/* ========================================
+   GUIDE / ABOUT COMPONENT
+   Mengatur section tentang, alasan memilih, dekorasi daun, card guide, dan daftar wisata guide.
+======================================== */
 .reason-box h4 {
     margin-bottom: 7px;
     font-size: 1rem;
 }
 
+/* ========================================
+   GUIDE / ABOUT COMPONENT
+   Mengatur section tentang, alasan memilih, dekorasi daun, card guide, dan daftar wisata guide.
+======================================== */
 /* #CONTOH TENTANG STYLE */
 
 .about-text {
@@ -88,15 +145,27 @@
     text-align: center;
 }
 
+/* ========================================
+   GUIDE / ABOUT COMPONENT
+   Mengatur section tentang, alasan memilih, dekorasi daun, card guide, dan daftar wisata guide.
+======================================== */
 .team-grid {
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 }
 
+/* ========================================
+   GUIDE / ABOUT COMPONENT
+   Mengatur section tentang, alasan memilih, dekorasi daun, card guide, dan daftar wisata guide.
+======================================== */
 .team-card {
     padding: 24px 18px;
     text-align: center;
 }
 
+/* ========================================
+   GUIDE / ABOUT COMPONENT
+   Mengatur section tentang, alasan memilih, dekorasi daun, card guide, dan daftar wisata guide.
+======================================== */
 .team-card img {
     width: 110px;
     height: 110px;
@@ -107,23 +176,39 @@
     object-position: center;
 }
 
+/* ========================================
+   GUIDE / ABOUT COMPONENT
+   Mengatur section tentang, alasan memilih, dekorasi daun, card guide, dan daftar wisata guide.
+======================================== */
 .team-card .jabatan {
     color: var(--gold);
     font-size: 0.86rem;
     font-weight: 800;
 }
 
+/* ========================================
+   FORM COMPONENT
+   Mengatur field form, label, spacing, focus state, dan kenyamanan input user.
+======================================== */
 .form-card {
     max-width: 650px;
     margin: 0 auto;
     padding: 30px;
 }
 
+/* ========================================
+   FORM COMPONENT
+   Mengatur field form, label, spacing, focus state, dan kenyamanan input user.
+======================================== */
 .form-container form {
     display: grid;
     gap: 14px;
 }
 
+/* ========================================
+   FORM COMPONENT
+   Mengatur field form, label, spacing, focus state, dan kenyamanan input user.
+======================================== */
 .form-container input,
 .form-container textarea {
     min-height: 50px;
@@ -131,10 +216,18 @@
     border-radius: 12px;
 }
 
+/* ========================================
+   FORM COMPONENT
+   Mengatur field form, label, spacing, focus state, dan kenyamanan input user.
+======================================== */
 .form-container textarea {
     resize: vertical;
 }
 
+/* ========================================
+   BUTTON / CTA COMPONENT
+   Mengatur ukuran, radius, warna, shadow, transisi, dan affordance tombol.
+======================================== */
 .form-container button {
     min-height: 52px;
     border: 0;
@@ -146,16 +239,28 @@
     transition: background 0.25s ease, transform 0.25s ease;
 }
 
+/* ========================================
+   HOVER EFFECT
+   Memberikan feedback interaktif saat user mengarahkan cursor tanpa mengubah layout.
+======================================== */
 .form-container button:hover {
     background: var(--green-dark);
     transform: translateY(-2px);
 }
 
+/* ========================================
+   BUTTON / CTA COMPONENT
+   Mengatur ukuran, radius, warna, shadow, transisi, dan affordance tombol.
+======================================== */
 .cta-banner {
     padding: 0 20px 34px;
     background: var(--cream);
 }
 
+/* ========================================
+   BUTTON / CTA COMPONENT
+   Mengatur ukuran, radius, warna, shadow, transisi, dan affordance tombol.
+======================================== */
 .cta-inner {
     padding: 22px 28px;
     display: flex;
@@ -168,12 +273,20 @@
     box-shadow: var(--shadow);
 }
 
+/* ========================================
+   BUTTON / CTA COMPONENT
+   Mengatur ukuran, radius, warna, shadow, transisi, dan affordance tombol.
+======================================== */
 .cta-text {
     display: flex;
     align-items: center;
     gap: 16px;
 }
 
+/* ========================================
+   CSS COMPONENT DETAIL
+   Mengatur selector .headphone agar tampilan website tetap konsisten.
+======================================== */
 .headphone {
     width: 52px;
     height: 52px;
@@ -182,37 +295,65 @@
     font-size: 1.55rem;
 }
 
+/* ========================================
+   BUTTON / CTA COMPONENT
+   Mengatur ukuran, radius, warna, shadow, transisi, dan affordance tombol.
+======================================== */
 .cta-text h3 {
     font-size: 1.15rem;
     line-height: 1.25;
 }
 
+/* ========================================
+   BUTTON / CTA COMPONENT
+   Mengatur ukuran, radius, warna, shadow, transisi, dan affordance tombol.
+======================================== */
 .cta-text p {
     color: rgba(255, 255, 255, 0.78);
     font-size: 0.9rem;
 }
 
+/* ========================================
+   BUTTON / CTA COMPONENT
+   Mengatur ukuran, radius, warna, shadow, transisi, dan affordance tombol.
+======================================== */
 .btn-gold-cta {
     flex: 0 0 auto;
     background: var(--gold);
     color: var(--white);
 }
 
+/* ========================================
+   GUIDE / ABOUT COMPONENT
+   Mengatur section tentang, alasan memilih, dekorasi daun, card guide, dan daftar wisata guide.
+======================================== */
 .about-section .team-grid {
     grid-template-columns: repeat(5, minmax(0, 1fr));
     justify-content: center;
     gap: 24px;
 }
 
+/* ========================================
+   GUIDE / ABOUT COMPONENT
+   Mengatur section tentang, alasan memilih, dekorasi daun, card guide, dan daftar wisata guide.
+======================================== */
 .team-card {
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+/* ========================================
+   HOVER EFFECT
+   Memberikan feedback interaktif saat user mengarahkan cursor tanpa mengubah layout.
+======================================== */
 .team-card:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow);
 }
 
+/* ========================================
+   GUIDE / ABOUT COMPONENT
+   Mengatur section tentang, alasan memilih, dekorasi daun, card guide, dan daftar wisata guide.
+======================================== */
 .guide-trip-list {
     min-height: 44px;
     margin: 10px 0 14px;
@@ -221,6 +362,10 @@
     line-height: 1.45;
 }
 
+/* ========================================
+   BUTTON / CTA COMPONENT
+   Mengatur ukuran, radius, warna, shadow, transisi, dan affordance tombol.
+======================================== */
 .guide-trip-btn {
     min-height: 34px;
     padding: 8px 14px;
@@ -235,23 +380,39 @@
     transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
 }
 
+/* ========================================
+   HOVER EFFECT
+   Memberikan feedback interaktif saat user mengarahkan cursor tanpa mengubah layout.
+======================================== */
 .guide-trip-btn:hover {
     background: var(--green);
     color: var(--white);
     transform: translateY(-1px);
 }
 
+/* ========================================
+   GUIDE / ABOUT COMPONENT
+   Mengatur section tentang, alasan memilih, dekorasi daun, card guide, dan daftar wisata guide.
+======================================== */
 .section-container,
 .why-section {
     padding: 58px 20px;
 }
 
+/* ========================================
+   GUIDE / ABOUT COMPONENT
+   Mengatur section tentang, alasan memilih, dekorasi daun, card guide, dan daftar wisata guide.
+======================================== */
 .feature-card h4,
 .reason-box h4 {
     font-size: 0.98rem;
     font-weight: 900;
 }
 
+/* ========================================
+   TESTIMONIAL COMPONENT
+   Mengatur card review, rating bintang, avatar, toggle lihat semua, dan animasi testimoni.
+======================================== */
 .feature-card p,
 .reason-box p,
 .card-content p,
@@ -261,6 +422,10 @@
     line-height: 1.58;
 }
 
+/* ========================================
+   GUIDE / ABOUT COMPONENT
+   Mengatur section tentang, alasan memilih, dekorasi daun, card guide, dan daftar wisata guide.
+======================================== */
 .team-card,
 .form-card {
     padding: 24px 20px;

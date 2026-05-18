@@ -1,4 +1,13 @@
+/* ========================================
+   PRICE LIST POPUP
+   Styling modal price list, package card,
+   close button, dan efek premium hijau.
+======================================== */
 /* #CONTOH POPUP STYLE */
+/* ========================================
+   PRICE MODAL ROOT
+   Layer popup price list yang berada di atas halaman utama.
+======================================== */
 .price-modal {
     position: fixed;
     inset: 0;
@@ -9,10 +18,18 @@
     padding: 20px;
 }
 
+/* ========================================
+   POPUP / PRICE LIST COMPONENT
+   Mengatur modal popup, backdrop, card harga, tombol close, dan efek premium.
+======================================== */
 .price-modal.active {
     display: flex;
 }
 
+/* ========================================
+   POPUP / PRICE LIST COMPONENT
+   Mengatur modal popup, backdrop, card harga, tombol close, dan efek premium.
+======================================== */
 .price-modal-backdrop {
     position: absolute;
     inset: 0;
@@ -20,6 +37,10 @@
     backdrop-filter: blur(10px);
 }
 
+/* ========================================
+   POPUP / PRICE LIST COMPONENT
+   Mengatur modal popup, backdrop, card harga, tombol close, dan efek premium.
+======================================== */
 .price-modal-card {
     position: relative;
     z-index: 1;
@@ -32,16 +53,28 @@
     box-shadow: 0 28px 80px rgba(6, 70, 45, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.88);
 }
 
+/* ========================================
+   POPUP / PRICE LIST COMPONENT
+   Mengatur modal popup, backdrop, card harga, tombol close, dan efek premium.
+======================================== */
 .price-modal-card h3 {
     margin-bottom: 20px;
     color: var(--green-dark);
     font-size: 1.55rem;
 }
 
+/* ========================================
+   BOOKING COMPONENT
+   Mengatur popup booking, form, kalender, status tanggal, ringkasan, dan tombol WhatsApp.
+======================================== */
 .price-modal-card .booking-kicker {
     color: #0f7a4f;
 }
 
+/* ========================================
+   POPUP / PRICE LIST COMPONENT
+   Mengatur modal popup, backdrop, card harga, tombol close, dan efek premium.
+======================================== */
 .price-modal-close {
     position: absolute;
     top: 14px;
@@ -59,6 +92,10 @@
     transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+/* ========================================
+   HOVER EFFECT
+   Memberikan feedback interaktif saat user mengarahkan cursor tanpa mengubah layout.
+======================================== */
 .price-modal-close:hover {
     background: #0f7a4f;
     color: #ffffff;
@@ -66,12 +103,20 @@
     box-shadow: 0 14px 28px rgba(15, 122, 79, 0.22);
 }
 
+/* ========================================
+   POPUP / PRICE LIST COMPONENT
+   Mengatur modal popup, backdrop, card harga, tombol close, dan efek premium.
+======================================== */
 .price-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 16px;
 }
 
+/* ========================================
+   POPUP / PRICE LIST COMPONENT
+   Mengatur modal popup, backdrop, card harga, tombol close, dan efek premium.
+======================================== */
 .price-card {
     min-height: 190px;
     padding: 22px;
@@ -82,23 +127,39 @@
     transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
+/* ========================================
+   HOVER EFFECT
+   Memberikan feedback interaktif saat user mengarahkan cursor tanpa mengubah layout.
+======================================== */
 .price-card:hover {
     transform: translateY(-3px);
     border-color: rgba(31, 143, 95, 0.38);
     box-shadow: 0 18px 38px rgba(15, 122, 79, 0.14);
 }
 
+/* ========================================
+   POPUP / PRICE LIST COMPONENT
+   Mengatur modal popup, backdrop, card harga, tombol close, dan efek premium.
+======================================== */
 .price-card.featured {
     border-color: rgba(15, 122, 79, 0.62);
     background: linear-gradient(180deg, #ffffff 0%, #f1faf5 100%);
     box-shadow: 0 0 32px rgba(31, 143, 95, 0.18), 0 18px 42px rgba(15, 122, 79, 0.12);
 }
 
+/* ========================================
+   POPUP / PRICE LIST COMPONENT
+   Mengatur modal popup, backdrop, card harga, tombol close, dan efek premium.
+======================================== */
 .price-card h4 {
     margin-bottom: 10px;
     color: var(--green-dark);
 }
 
+/* ========================================
+   POPUP / PRICE LIST COMPONENT
+   Mengatur modal popup, backdrop, card harga, tombol close, dan efek premium.
+======================================== */
 .price-card strong {
     display: block;
     margin-bottom: 12px;
@@ -107,19 +168,35 @@
     text-shadow: 0 0 18px rgba(31, 143, 95, 0.18);
 }
 
+/* ========================================
+   POPUP / PRICE LIST COMPONENT
+   Mengatur modal popup, backdrop, card harga, tombol close, dan efek premium.
+======================================== */
 .price-card p {
     color: var(--muted);
     font-size: 0.9rem;
 }
 
+/* ========================================
+   POPUP / PRICE LIST COMPONENT
+   Mengatur modal popup, backdrop, card harga, tombol close, dan efek premium.
+======================================== */
 .static-price-grid {
     margin-top: 6px;
 }
 
+/* ========================================
+   POPUP / PRICE LIST COMPONENT
+   Mengatur modal popup, backdrop, card harga, tombol close, dan efek premium.
+======================================== */
 .price-grid {
     gap: 14px;
 }
 
+/* ========================================
+   POPUP / PRICE LIST COMPONENT
+   Mengatur modal popup, backdrop, card harga, tombol close, dan efek premium.
+======================================== */
 .price-card {
     min-height: 176px;
     padding: 20px;

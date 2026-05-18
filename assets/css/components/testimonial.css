@@ -1,4 +1,13 @@
+/* ========================================
+   TESTIMONIAL SECTION
+   Styling card review pelanggan, rating,
+   toggle lihat semua, dan animasi testimoni.
+======================================== */
 /* #CONTOH TESTIMONIAL STYLE */
+/* ========================================
+   SHARED GRID BASE
+   Grid reusable untuk feature, destinasi, alasan, testimoni, dan guide card.
+======================================== */
 .feature-grid,
 .card-grid,
 .reason-grid,
@@ -8,6 +17,10 @@
     gap: 24px;
 }
 
+/* ========================================
+   TESTIMONIAL COMPONENT
+   Mengatur card review, rating bintang, avatar, toggle lihat semua, dan animasi testimoni.
+======================================== */
 /* #CONTOH TESTIMONI GRID */
 
 .testimonial-section,
@@ -16,12 +29,20 @@
     background: var(--cream);
 }
 
+/* ========================================
+   TESTIMONIAL COMPONENT
+   Mengatur card review, rating bintang, avatar, toggle lihat semua, dan animasi testimoni.
+======================================== */
 .testi-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     max-width: 1060px;
     margin: 0 auto;
 }
 
+/* ========================================
+   TESTIMONIAL COMPONENT
+   Mengatur card review, rating bintang, avatar, toggle lihat semua, dan animasi testimoni.
+======================================== */
 .testimonial-toggle-checkbox {
     position: absolute;
     width: 1px;
@@ -30,6 +51,10 @@
     pointer-events: none;
 }
 
+/* ========================================
+   TESTIMONIAL COMPONENT
+   Mengatur card review, rating bintang, avatar, toggle lihat semua, dan animasi testimoni.
+======================================== */
 .testi-card,
 .team-card,
 .form-card {
@@ -39,41 +64,77 @@
     box-shadow: var(--soft-shadow);
 }
 
+/* ========================================
+   TESTIMONIAL COMPONENT
+   Mengatur card review, rating bintang, avatar, toggle lihat semua, dan animasi testimoni.
+======================================== */
 .testi-card {
     min-height: 220px;
     padding: 30px;
     animation: testimonialFade 0.36s ease both;
 }
 
+/* ========================================
+   TESTIMONIAL COMPONENT
+   Mengatur card review, rating bintang, avatar, toggle lihat semua, dan animasi testimoni.
+======================================== */
 .testimonial-toggle-checkbox:not(:checked) ~ .testi-grid .testi-card:nth-of-type(n+6) {
     display: none;
 }
 
+/* ========================================
+   TESTIMONIAL COMPONENT
+   Mengatur card review, rating bintang, avatar, toggle lihat semua, dan animasi testimoni.
+======================================== */
 .testimonial-toggle-checkbox:checked ~ .testi-grid .testi-card:nth-of-type(n+6) {
     display: block;
     animation: testimonialReveal 0.42s ease both;
 }
 
+/* ========================================
+   TESTIMONIAL COMPONENT
+   Mengatur card review, rating bintang, avatar, toggle lihat semua, dan animasi testimoni.
+======================================== */
 .testimonial-action {
     margin-top: 30px;
 }
 
+/* ========================================
+   BUTTON / CTA COMPONENT
+   Mengatur ukuran, radius, warna, shadow, transisi, dan affordance tombol.
+======================================== */
 .btn-testimonial-toggle {
     user-select: none;
 }
 
+/* ========================================
+   CSS COMPONENT DETAIL
+   Mengatur selector .toggle-label-less agar tampilan website tetap konsisten.
+======================================== */
 .toggle-label-less {
     display: none;
 }
 
+/* ========================================
+   TESTIMONIAL COMPONENT
+   Mengatur card review, rating bintang, avatar, toggle lihat semua, dan animasi testimoni.
+======================================== */
 .testimonial-toggle-checkbox:checked ~ .testimonial-action .toggle-label-more {
     display: none;
 }
 
+/* ========================================
+   TESTIMONIAL COMPONENT
+   Mengatur card review, rating bintang, avatar, toggle lihat semua, dan animasi testimoni.
+======================================== */
 .testimonial-toggle-checkbox:checked ~ .testimonial-action .toggle-label-less {
     display: inline;
 }
 
+/* ========================================
+   ANIMATION KEYFRAMES
+   Mendefinisikan animasi testimonialFade untuk transisi visual yang lebih halus.
+======================================== */
 @keyframes testimonialFade {
     from {
         opacity: 0;
@@ -85,6 +146,10 @@
     }
 }
 
+/* ========================================
+   ANIMATION KEYFRAMES
+   Mendefinisikan animasi testimonialReveal untuk transisi visual yang lebih halus.
+======================================== */
 @keyframes testimonialReveal {
     from {
         opacity: 0;
@@ -96,6 +161,10 @@
     }
 }
 
+/* ========================================
+   TESTIMONIAL COMPONENT
+   Mengatur card review, rating bintang, avatar, toggle lihat semua, dan animasi testimoni.
+======================================== */
 .quote-mark {
     display: block;
     color: var(--green);
@@ -104,11 +173,19 @@
     font-weight: 900;
 }
 
+/* ========================================
+   TESTIMONIAL COMPONENT
+   Mengatur card review, rating bintang, avatar, toggle lihat semua, dan animasi testimoni.
+======================================== */
 .quote {
     min-height: 92px;
     margin: 4px 0 14px;
 }
 
+/* ========================================
+   TESTIMONIAL COMPONENT
+   Mengatur card review, rating bintang, avatar, toggle lihat semua, dan animasi testimoni.
+======================================== */
 .testi-trip {
     min-height: 30px;
     margin-bottom: 18px;
@@ -122,12 +199,20 @@
     font-weight: 850;
 }
 
+/* ========================================
+   CSS COMPONENT DETAIL
+   Mengatur selector .client-info agar tampilan website tetap konsisten.
+======================================== */
 .client-info {
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
+/* ========================================
+   CSS COMPONENT DETAIL
+   Mengatur selector .avatar agar tampilan website tetap konsisten.
+======================================== */
 .avatar {
     width: 44px;
     height: 44px;
@@ -135,20 +220,36 @@
     color: var(--green-dark);
 }
 
+/* ========================================
+   CSS COMPONENT DETAIL
+   Mengatur selector .client-info h4 agar tampilan website tetap konsisten.
+======================================== */
 .client-info h4 {
     font-size: 0.92rem;
 }
 
+/* ========================================
+   CSS COMPONENT DETAIL
+   Mengatur selector .client-info span:not(.stars-right) agar tampilan website tetap konsisten.
+======================================== */
 .client-info span:not(.stars-right) {
     color: var(--muted);
     font-size: 0.78rem;
 }
 
+/* ========================================
+   CSS COMPONENT DETAIL
+   Mengatur selector .stars-right agar tampilan website tetap konsisten.
+======================================== */
 .stars-right {
     margin-left: auto;
     white-space: nowrap;
 }
 
+/* ========================================
+   TESTIMONIAL COMPONENT
+   Mengatur card review, rating bintang, avatar, toggle lihat semua, dan animasi testimoni.
+======================================== */
 .feature-grid,
 .card-grid,
 .reason-grid,
@@ -157,10 +258,18 @@
     gap: 20px;
 }
 
+/* ========================================
+   TESTIMONIAL COMPONENT
+   Mengatur card review, rating bintang, avatar, toggle lihat semua, dan animasi testimoni.
+======================================== */
 .testi-grid {
     max-width: 1100px;
 }
 
+/* ========================================
+   TESTIMONIAL COMPONENT
+   Mengatur card review, rating bintang, avatar, toggle lihat semua, dan animasi testimoni.
+======================================== */
 .testi-card {
     min-height: 205px;
     padding: 26px;

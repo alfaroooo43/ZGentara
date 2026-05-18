@@ -1,6 +1,23 @@
 <?php
+/*
+|--------------------------------------------------------------------------
+| MENU MODEL
+|--------------------------------------------------------------------------
+| Model ini menyimpan data destinasi, tentang kami, guide, dan testimoni.
+| Data masih berupa array PHP sehingga mudah dipelajari dan dirawat.
+|
+*/
+// Class model untuk menyediakan data landing page kepada controller.
 class Menu {
+    /*
+    |--------------------------------------------------------------------------
+    | DATA DAN FILTER DESTINASI
+    |--------------------------------------------------------------------------
+    | Mengembalikan daftar wisata sesuai kategori vibe dan kata kunci search.
+    |
+    */
     public function getJastrip($vibe = 'all', $search = '') {
+        // Master data wisata Bondowoso yang dipakai untuk card destinasi.
         $semuaTrip = [
             // Hardcore Adventure
             [
@@ -68,6 +85,7 @@ class Menu {
         ];
 
         // LOGIKA PENYARINGAN MURNI FLEKSIBEL
+        // Bagian ini hanya menyaring array, tidak mengubah data asli destinasi.
         $hasilFilter = [];
         
         // 1. Bersihkan inputan dari spasi depan/belakang dan ubah ke huruf kecil semua
@@ -99,6 +117,13 @@ class Menu {
         return $hasilFilter;
     }
 
+    /*
+    |--------------------------------------------------------------------------
+    | DATA TENTANG KAMI DAN GUIDE
+    |--------------------------------------------------------------------------
+    | Menyediakan deskripsi brand dan daftar guide yang muncul di section tentang.
+    |
+    */
     public function getTentangKami() {
         return [
             'deskripsi' => 'Di setiap perjalanan, selalu ada cerita yang menunggu untuk ditemukan. ZGentara Trip hadir untuk membawamu menjelajahi keindahan alam Bondowoso melalui pengalaman yang hangat, bermakna, dan tak sekadar singgah dalam ingatan.',
@@ -112,6 +137,13 @@ class Menu {
         ];
     }
 
+    /*
+    |--------------------------------------------------------------------------
+    | DATA TESTIMONI
+    |--------------------------------------------------------------------------
+    | Menyediakan testimoni dasar yang dapat digabung dengan data tambahan di view.
+    |
+    */
     public function getTestimoni() {
         return [
             ['nama' => 'Risa F.', 'ulasan' => 'Trip ke Kawah Wurung bareng Gentara bener-bener sehangat itu! Suasana dan seduhan kopinya juara.'],

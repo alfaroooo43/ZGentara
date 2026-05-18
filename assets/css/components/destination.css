@@ -1,10 +1,23 @@
+/* ========================================
+   DESTINASI POPULER
+   Styling search bar, filter vibe, card wisata,
+   rating, chip booking, dan tombol lihat semua.
+======================================== */
 /* #CONTOH DESTINASI STYLE */
 
+/* ========================================
+   DESTINATION SECTION ANCHOR
+   Offset dan scroll-margin agar klik menu Booking berhenti tepat di section destinasi.
+======================================== */
 .destination-section {
     padding-top: 38px;
     scroll-margin-top: 108px;
 }
 
+/* ========================================
+   DESTINATION COMPONENT
+   Mengatur search, filter kategori, card wisata, image overlay, rating, dan tombol booking.
+======================================== */
 .search-filter-form {
     max-width: 830px;
     margin: 0 auto 30px;
@@ -15,12 +28,20 @@
     box-shadow: var(--soft-shadow);
 }
 
+/* ========================================
+   DESTINATION COMPONENT
+   Mengatur search, filter kategori, card wisata, image overlay, rating, dan tombol booking.
+======================================== */
 .search-container {
     display: flex;
     gap: 12px;
     margin-bottom: 14px;
 }
 
+/* ========================================
+   DESTINATION COMPONENT
+   Mengatur search, filter kategori, card wisata, image overlay, rating, dan tombol booking.
+======================================== */
 .search-input,
 .form-container input,
 .form-container textarea {
@@ -32,12 +53,20 @@
     transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
+/* ========================================
+   DESTINATION COMPONENT
+   Mengatur search, filter kategori, card wisata, image overlay, rating, dan tombol booking.
+======================================== */
 .search-input {
     min-height: 48px;
     padding: 0 18px;
     border-radius: 999px;
 }
 
+/* ========================================
+   FOCUS STATE
+   Memberikan tanda fokus untuk input atau elemen interaktif agar aksesibilitas tetap baik.
+======================================== */
 .search-input:focus,
 .form-container input:focus,
 .form-container textarea:focus {
@@ -45,6 +74,10 @@
     box-shadow: 0 0 0 4px rgba(15, 107, 69, 0.1);
 }
 
+/* ========================================
+   BUTTON / CTA COMPONENT
+   Mengatur ukuran, radius, warna, shadow, transisi, dan affordance tombol.
+======================================== */
 .btn-search-submit {
     min-height: 48px;
     padding: 0 24px;
@@ -56,6 +89,10 @@
     font-weight: 800;
 }
 
+/* ========================================
+   DESTINATION COMPONENT
+   Mengatur search, filter kategori, card wisata, image overlay, rating, dan tombol booking.
+======================================== */
 .filter-container {
     display: flex;
     flex-wrap: wrap;
@@ -63,6 +100,10 @@
     gap: 10px;
 }
 
+/* ========================================
+   BUTTON / CTA COMPONENT
+   Mengatur ukuran, radius, warna, shadow, transisi, dan affordance tombol.
+======================================== */
 .filter-btn {
     min-height: 38px;
     padding: 8px 15px;
@@ -76,6 +117,10 @@
     transition: all 0.25s ease;
 }
 
+/* ========================================
+   HOVER EFFECT
+   Memberikan feedback interaktif saat user mengarahkan cursor tanpa mengubah layout.
+======================================== */
 .filter-btn:hover,
 .filter-btn.active {
     border-color: var(--green);
@@ -83,10 +128,18 @@
     color: var(--white);
 }
 
+/* ========================================
+   GRID LAYOUT
+   Mengatur susunan kolom agar card dan konten tetap rapi serta mudah dipindai.
+======================================== */
 .card-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+/* ========================================
+   DESTINATION COMPONENT
+   Mengatur search, filter kategori, card wisata, image overlay, rating, dan tombol booking.
+======================================== */
 .trip-card {
     position: relative;
     min-height: 228px;
@@ -97,16 +150,28 @@
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+/* ========================================
+   HOVER EFFECT
+   Memberikan feedback interaktif saat user mengarahkan cursor tanpa mengubah layout.
+======================================== */
 .trip-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 20px 42px rgba(18, 61, 43, 0.18);
 }
 
+/* ========================================
+   DESTINATION COMPONENT
+   Mengatur search, filter kategori, card wisata, image overlay, rating, dan tombol booking.
+======================================== */
 .card-img {
     position: absolute;
     inset: 0;
 }
 
+/* ========================================
+   DESTINATION COMPONENT
+   Mengatur search, filter kategori, card wisata, image overlay, rating, dan tombol booking.
+======================================== */
 .card-img img {
     width: 100%;
     height: 100%;
@@ -115,10 +180,18 @@
     transition: transform 0.5s ease;
 }
 
+/* ========================================
+   HOVER EFFECT
+   Memberikan feedback interaktif saat user mengarahkan cursor tanpa mengubah layout.
+======================================== */
 .trip-card:hover .card-img img {
     transform: scale(1.07);
 }
 
+/* ========================================
+   PSEUDO ELEMENT DECORATION
+   Elemen dekoratif tambahan yang dibuat lewat CSS tanpa menambah markup HTML.
+======================================== */
 .card-img::after {
     content: "";
     position: absolute;
@@ -126,6 +199,10 @@
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.02) 24%, rgba(0, 0, 0, 0.78) 100%);
 }
 
+/* ========================================
+   CARD / SHADOW COMPONENT
+   Mengatur card, radius, border, shadow, dan visual depth agar tampilan premium.
+======================================== */
 .card-content {
     position: relative;
     z-index: 2;
@@ -137,6 +214,10 @@
     color: var(--white);
 }
 
+/* ========================================
+   DESTINATION COMPONENT
+   Mengatur search, filter kategori, card wisata, image overlay, rating, dan tombol booking.
+======================================== */
 .vibe-tag {
     margin-bottom: 4px;
     color: rgba(255, 255, 255, 0.82);
@@ -144,16 +225,28 @@
     font-weight: 650;
 }
 
+/* ========================================
+   CARD / SHADOW COMPONENT
+   Mengatur card, radius, border, shadow, dan visual depth agar tampilan premium.
+======================================== */
 .card-content h3 {
     color: var(--white);
     font-size: 1.08rem;
     line-height: 1.25;
 }
 
+/* ========================================
+   CARD / SHADOW COMPONENT
+   Mengatur card, radius, border, shadow, dan visual depth agar tampilan premium.
+======================================== */
 .card-content p {
     display: none;
 }
 
+/* ========================================
+   CARD / SHADOW COMPONENT
+   Mengatur card, radius, border, shadow, dan visual depth agar tampilan premium.
+======================================== */
 .card-bottom {
     margin-top: 8px;
     display: flex;
@@ -161,6 +254,10 @@
     gap: 9px;
 }
 
+/* ========================================
+   STAR RATING DISPLAY
+   Warna dan jarak bintang rating pada card wisata.
+======================================== */
 .stars,
 .stars-right {
     color: #f2c94c;
@@ -168,12 +265,20 @@
     font-size: 0.88rem;
 }
 
+/* ========================================
+   TESTIMONIAL COMPONENT
+   Mengatur card review, rating bintang, avatar, toggle lihat semua, dan animasi testimoni.
+======================================== */
 .rating-num {
     color: rgba(255, 255, 255, 0.92);
     font-size: 0.82rem;
     font-weight: 800;
 }
 
+/* ========================================
+   EMPTY STATE MESSAGE
+   Pesan fallback saat data destinasi atau testimoni tidak tersedia.
+======================================== */
 .empty-message {
     grid-column: 1 / -1;
     padding: 22px;
@@ -184,20 +289,36 @@
     box-shadow: var(--soft-shadow);
 }
 
+/* ========================================
+   DESTINATION COMPONENT
+   Mengatur search, filter kategori, card wisata, image overlay, rating, dan tombol booking.
+======================================== */
 .destination-empty-message {
     display: none;
     margin-top: 20px;
 }
 
+/* ========================================
+   DESTINATION COMPONENT
+   Mengatur search, filter kategori, card wisata, image overlay, rating, dan tombol booking.
+======================================== */
 .destination-empty-message.is-visible {
     display: block;
 }
 
+/* ========================================
+   CENTERED ACTION WRAPPER
+   Area tombol tengah seperti lihat semua destinasi atau testimoni.
+======================================== */
 .action-center {
     margin-top: 30px;
     text-align: center;
 }
 
+/* ========================================
+   GUIDE / ABOUT COMPONENT
+   Mengatur section tentang, alasan memilih, dekorasi daun, card guide, dan daftar wisata guide.
+======================================== */
 .decor-leaf {
     position: absolute;
     z-index: 0;
@@ -209,12 +330,20 @@
     filter: blur(0.2px);
 }
 
+/* ========================================
+   GUIDE / ABOUT COMPONENT
+   Mengatur section tentang, alasan memilih, dekorasi daun, card guide, dan daftar wisata guide.
+======================================== */
 .decor-leaf-left {
     left: max(14px, calc((100vw - var(--container)) / 2 - 82px));
     top: 34px;
     transform: rotate(-18deg);
 }
 
+/* ========================================
+   GUIDE / ABOUT COMPONENT
+   Mengatur section tentang, alasan memilih, dekorasi daun, card guide, dan daftar wisata guide.
+======================================== */
 .decor-leaf-right {
     right: max(10px, calc((100vw - var(--container)) / 2 - 76px));
     bottom: 82px;
@@ -222,6 +351,10 @@
     opacity: 0.12;
 }
 
+/* ========================================
+   CSS COMPONENT DETAIL
+   Mengatur selector .circle-icon agar tampilan website tetap konsisten.
+======================================== */
 .circle-icon {
     width: 74px;
     height: 74px;
@@ -233,6 +366,10 @@
     font-size: 1.45rem;
 }
 
+/* ========================================
+   CSS COMPONENT DETAIL
+   Mengatur selector .promo-banner agar tampilan website tetap konsisten.
+======================================== */
 .promo-banner {
     min-height: 270px;
     padding: 46px 58px;
@@ -248,10 +385,18 @@
     box-shadow: var(--shadow);
 }
 
+/* ========================================
+   CSS COMPONENT DETAIL
+   Mengatur selector .promo-info agar tampilan website tetap konsisten.
+======================================== */
 .promo-info {
     color: var(--white);
 }
 
+/* ========================================
+   CSS COMPONENT DETAIL
+   Mengatur selector .promo-info h2 agar tampilan website tetap konsisten.
+======================================== */
 .promo-info h2 {
     margin-bottom: 14px;
     font-family: Georgia, "Times New Roman", serif;
@@ -260,12 +405,20 @@
     line-height: 1.18;
 }
 
+/* ========================================
+   CSS COMPONENT DETAIL
+   Mengatur selector .promo-info h2 span agar tampilan website tetap konsisten.
+======================================== */
 .promo-info h2 span {
     color: #e4c679;
     font-style: italic;
     font-weight: 500;
 }
 
+/* ========================================
+   CSS COMPONENT DETAIL
+   Mengatur selector .promo-info p agar tampilan website tetap konsisten.
+======================================== */
 .promo-info p {
     max-width: 500px;
     margin-bottom: 24px;
@@ -273,16 +426,28 @@
     font-size: 0.94rem;
 }
 
+/* ========================================
+   BUTTON / CTA COMPONENT
+   Mengatur ukuran, radius, warna, shadow, transisi, dan affordance tombol.
+======================================== */
 .btn-white {
     background: var(--white);
     color: var(--green-dark);
 }
 
+/* ========================================
+   CSS COMPONENT DETAIL
+   Mengatur selector .promo-frame agar tampilan website tetap konsisten.
+======================================== */
 .promo-frame {
     position: relative;
     min-height: 215px;
 }
 
+/* ========================================
+   CSS COMPONENT DETAIL
+   Mengatur selector .foto-frame agar tampilan website tetap konsisten.
+======================================== */
 .foto-frame {
     position: absolute;
     width: 190px;
@@ -292,6 +457,10 @@
     box-shadow: 0 16px 30px rgba(0, 0, 0, 0.25);
 }
 
+/* ========================================
+   CSS COMPONENT DETAIL
+   Mengatur selector .foto-frame img agar tampilan website tetap konsisten.
+======================================== */
 .foto-frame img {
     width: 100%;
     aspect-ratio: 1 / 1;
@@ -300,6 +469,10 @@
     border-radius: 5px;
 }
 
+/* ========================================
+   CSS COMPONENT DETAIL
+   Mengatur selector .frame-1 agar tampilan website tetap konsisten.
+======================================== */
 .frame-1 {
     left: 45px;
     top: 2px;
@@ -307,12 +480,20 @@
     transform: rotate(-6deg);
 }
 
+/* ========================================
+   CSS COMPONENT DETAIL
+   Mengatur selector .frame-2 agar tampilan website tetap konsisten.
+======================================== */
 .frame-2 {
     right: 35px;
     top: 22px;
     transform: rotate(8deg);
 }
 
+/* ========================================
+   BOOKING COMPONENT
+   Mengatur popup booking, form, kalender, status tanggal, ringkasan, dan tombol WhatsApp.
+======================================== */
 .card-booking-chip {
     margin-left: auto;
     padding: 4px 9px;
@@ -323,6 +504,10 @@
     font-weight: 850;
 }
 
+/* ========================================
+   DESTINATION COMPONENT
+   Mengatur search, filter kategori, card wisata, image overlay, rating, dan tombol booking.
+======================================== */
 .destination-filter-toggle,
 .destination-expand-toggle {
     position: absolute;
@@ -332,14 +517,26 @@
     pointer-events: none;
 }
 
+/* ========================================
+   DESTINATION COMPONENT
+   Mengatur search, filter kategori, card wisata, image overlay, rating, dan tombol booking.
+======================================== */
 .css-filter-panel {
     max-width: 830px;
 }
 
+/* ========================================
+   DESTINATION COMPONENT
+   Mengatur search, filter kategori, card wisata, image overlay, rating, dan tombol booking.
+======================================== */
 .css-filter-panel .search-container {
     margin-bottom: 14px;
 }
 
+/* ========================================
+   BUTTON / CTA COMPONENT
+   Mengatur ukuran, radius, warna, shadow, transisi, dan affordance tombol.
+======================================== */
 .destination-filter-shell .filter-btn {
     display: inline-flex;
     align-items: center;
@@ -347,6 +544,10 @@
     user-select: none;
 }
 
+/* ========================================
+   DESTINATION COMPONENT
+   Mengatur search, filter kategori, card wisata, image overlay, rating, dan tombol booking.
+======================================== */
 #filter-all:checked ~ .css-filter-panel .filter-all-label,
 #filter-hardcore:checked ~ .css-filter-panel .filter-hardcore-label,
 #filter-chill:checked ~ .css-filter-panel .filter-chill-label,
@@ -357,20 +558,36 @@
     box-shadow: 0 12px 26px rgba(15, 107, 69, 0.16);
 }
 
+/* ========================================
+   DESTINATION COMPONENT
+   Mengatur search, filter kategori, card wisata, image overlay, rating, dan tombol booking.
+======================================== */
 .destination-card-grid .trip-card {
     display: block !important;
 }
 
+/* ========================================
+   DESTINATION COMPONENT
+   Mengatur search, filter kategori, card wisata, image overlay, rating, dan tombol booking.
+======================================== */
 #filter-all:checked ~ #destinationExpand:not(:checked) ~ .destination-card-grid .trip-card:nth-of-type(n+5) {
     display: none !important;
 }
 
+/* ========================================
+   DESTINATION COMPONENT
+   Mengatur search, filter kategori, card wisata, image overlay, rating, dan tombol booking.
+======================================== */
 #filter-hardcore:checked ~ .destination-card-grid .trip-card:not(.vibe-hardcore),
 #filter-chill:checked ~ .destination-card-grid .trip-card:not(.vibe-chill),
 #filter-golden:checked ~ .destination-card-grid .trip-card:not(.vibe-golden) {
     display: none !important;
 }
 
+/* ========================================
+   DESTINATION COMPONENT
+   Mengatur search, filter kategori, card wisata, image overlay, rating, dan tombol booking.
+======================================== */
 #filter-hardcore:checked ~ .destination-card-grid .trip-card.vibe-hardcore,
 #filter-chill:checked ~ .destination-card-grid .trip-card.vibe-chill,
 #filter-golden:checked ~ .destination-card-grid .trip-card.vibe-golden,
@@ -379,28 +596,52 @@
     animation: destinationReveal 0.32s ease both;
 }
 
+/* ========================================
+   DESTINATION COMPONENT
+   Mengatur search, filter kategori, card wisata, image overlay, rating, dan tombol booking.
+======================================== */
 #filter-hardcore:checked ~ .destination-action,
 #filter-chill:checked ~ .destination-action,
 #filter-golden:checked ~ .destination-action {
     display: none;
 }
 
+/* ========================================
+   DESTINATION COMPONENT
+   Mengatur search, filter kategori, card wisata, image overlay, rating, dan tombol booking.
+======================================== */
 .destination-action .toggle-label-less {
     display: none;
 }
 
+/* ========================================
+   DESTINATION COMPONENT
+   Mengatur search, filter kategori, card wisata, image overlay, rating, dan tombol booking.
+======================================== */
 #destinationExpand:checked ~ .destination-action .toggle-label-more {
     display: none;
 }
 
+/* ========================================
+   DESTINATION COMPONENT
+   Mengatur search, filter kategori, card wisata, image overlay, rating, dan tombol booking.
+======================================== */
 #destinationExpand:checked ~ .destination-action .toggle-label-less {
     display: inline;
 }
 
+/* ========================================
+   BUTTON / CTA COMPONENT
+   Mengatur ukuran, radius, warna, shadow, transisi, dan affordance tombol.
+======================================== */
 .btn-destination-toggle {
     user-select: none;
 }
 
+/* ========================================
+   ANIMATION KEYFRAMES
+   Mendefinisikan animasi destinationReveal untuk transisi visual yang lebih halus.
+======================================== */
 @keyframes destinationReveal {
     from {
         opacity: 0;
@@ -412,31 +653,55 @@
     }
 }
 
+/* ========================================
+   BOOKING COMPONENT
+   Mengatur popup booking, form, kalender, status tanggal, ringkasan, dan tombol WhatsApp.
+======================================== */
 .card-booking-chip {
     display: inline-flex;
     align-items: center;
     justify-content: center;
 }
 
+/* ========================================
+   DESTINATION COMPONENT
+   Mengatur search, filter kategori, card wisata, image overlay, rating, dan tombol booking.
+======================================== */
 .search-filter-form {
     margin-bottom: 24px;
     padding: 16px;
 }
 
+/* ========================================
+   DESTINATION COMPONENT
+   Mengatur search, filter kategori, card wisata, image overlay, rating, dan tombol booking.
+======================================== */
 .filter-container {
     gap: 9px;
 }
 
+/* ========================================
+   BUTTON / CTA COMPONENT
+   Mengatur ukuran, radius, warna, shadow, transisi, dan affordance tombol.
+======================================== */
 .filter-btn {
     min-height: 37px;
     padding: 8px 16px;
 }
 
+/* ========================================
+   DESTINATION COMPONENT
+   Mengatur search, filter kategori, card wisata, image overlay, rating, dan tombol booking.
+======================================== */
 .trip-card,
 .card-content {
     min-height: 246px;
 }
 
+/* ========================================
+   DESTINATION COMPONENT
+   Mengatur search, filter kategori, card wisata, image overlay, rating, dan tombol booking.
+======================================== */
 .vibe-tag,
 .rating-num {
     font-size: 0.82rem;

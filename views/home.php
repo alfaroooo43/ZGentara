@@ -1,4 +1,12 @@
 <?php
+/*
+|--------------------------------------------------------------------------
+| HOME VIEW DATA PREPARATION
+|--------------------------------------------------------------------------
+| Bagian ini menyiapkan data aman dari controller sebelum dipakai di HTML.
+| Nilai fallback menjaga section tetap tampil meskipun data model kosong.
+|
+*/
 $data = (isset($data) && is_array($data)) ? $data : [];
 $assetBase = $data['asset_base'] ?? '../assets';
 $jastrip = (isset($data['jastrip']) && is_array($data['jastrip'])) ? $data['jastrip'] : [];
@@ -11,6 +19,13 @@ $is_show_all = isset($_GET['show_all']) && $_GET['show_all'] === 'true';
 $destinasi_tampil = $is_show_all ? $jastrip : array_slice($jastrip, 0, 4);
 #CONTOH TESTIMONI
 #CONTOH Data tambahan ini menjaga testimoni tetap banyak tanpa menghapus data dari model.
+/*
+|--------------------------------------------------------------------------
+| TESTIMONI TAMBAHAN
+|--------------------------------------------------------------------------
+| Data ini menambah variasi testimoni tanpa menghapus testimoni dari model.
+|
+*/
 $defaultTestimonials = [
     [
         'nama' => 'Aulia Rahma',
@@ -161,6 +176,14 @@ $destinationFallbackImages = [
     'BlueFireIjenBondowoso.png'
 ];
 $teamImages = ['foto1.png', 'foto2.png', 'foto3.png', 'foto4.png', 'foto5.png'];
+/*
+|--------------------------------------------------------------------------
+| MAPPING GUIDE BOOKING
+|--------------------------------------------------------------------------
+| Setiap guide memiliki daftar wisata, nomor WhatsApp, foto, dan tanggal penuh.
+| Mapping ini dipakai JavaScript untuk popup booking dinamis.
+|
+*/
 $bookingGuides = [
     [
         'id' => 'guide-1',
@@ -209,6 +232,13 @@ $bookingGuides = [
     ]
 ];
 $bookingTrips = array_values(array_unique(array_merge(...array_column($bookingGuides, 'trips'))));
+/*
+|--------------------------------------------------------------------------
+| PAKET BOOKING
+|--------------------------------------------------------------------------
+| Daftar paket harga yang muncul pada form booking dan price list.
+|
+*/
 $bookingPackages = [
     ['id' => 'basic', 'name' => 'Basic', 'price' => 150000, 'label' => 'Basic - 150K'],
     ['id' => 'premium', 'name' => 'Premium', 'price' => 350000, 'label' => 'Premium - 350K'],
@@ -216,6 +246,10 @@ $bookingPackages = [
 ];
 ?>
 
+<!-- ==============================
+     HERO SECTION
+     Banner utama dengan background wisata, headline, dan tombol mulai perjalanan.
+================================== -->
 <?php #CONTOH HERO SECTION ?>
 <section id="hero" class="hero">
     <div class="hero-overlay"></div>
@@ -235,6 +269,10 @@ $bookingPackages = [
     </div>
 </section>
 
+<!-- ==============================
+     FEATURE SECTION
+     Kartu ringkas yang menjelaskan nilai utama layanan ZGentara Trip.
+================================== -->
 <?php #CONTOH FITUR SECTION ?>
 <section id="fitur" class="section-container">
     <div class="section-shell">
@@ -277,6 +315,10 @@ $bookingPackages = [
     </div>
 </section>
 
+<!-- ==============================
+     DESTINASI POPULER
+     Search, filter vibe, card wisata, rating, dan tombol booking destinasi.
+================================== -->
 <?php #CONTOH DESTINASI POPULER ?>
 <section id="jastrip" class="section-container destination-section">
     <div class="section-shell">
@@ -354,6 +396,10 @@ $bookingPackages = [
     </div>
 </section>
 
+<!-- ==============================
+     BOOKING POPUP
+     Modal booking dinamis untuk memilih paket, tanggal, guide, dan WhatsApp.
+================================== -->
 <section id="booking-trip" class="booking-section" aria-hidden="true">
     <div class="booking-modal-backdrop" data-close-booking></div>
     <div class="booking-shell">
@@ -548,6 +594,10 @@ $bookingPackages = [
     </div>
 </section>
 
+<!-- ==============================
+     MENGAPA MEMILIH KAMI
+     Section alasan utama dengan card benefit dan icon sederhana.
+================================== -->
 <?php #CONTOH ALASAN MEMILIH ?>
 <section class="why-section">
     <img src="<?= htmlspecialchars($assetBase); ?>/icons/daun.png" alt="" class="decor-leaf decor-leaf-left" aria-hidden="true">
@@ -599,6 +649,10 @@ $bookingPackages = [
     </div>
 </section>
 
+<!-- ==============================
+     TENTANG KAMI DAN GUIDE
+     Deskripsi brand serta daftar guide yang menangani perjalanan.
+================================== -->
 <?php #CONTOH TENTANG KAMI ?>
 <section id="tentang" class="section-container about-section">
     <div class="section-shell">
@@ -624,6 +678,10 @@ $bookingPackages = [
     </div>
 </section>
 
+<!-- ==============================
+     TESTIMONI PELANGGAN
+     Review pelanggan dengan mekanisme lihat semua berbasis checkbox CSS.
+================================== -->
 <?php #CONTOH TESTIMONI ?>
 <section id="testimoni" class="section-container testimonial-section">
     <div class="section-shell">
@@ -672,6 +730,10 @@ $bookingPackages = [
     </div>
 </section>
 
+<!-- ==============================
+     FORM SARAN DAN KRITIK
+     Form feedback pengunjung yang diarahkan ke WhatsApp admin.
+================================== -->
 <?php #CONTOH SARAN DAN KRITIK ?>
 <section id="saran" class="section-container form-section">
     <div class="section-shell">
@@ -693,6 +755,10 @@ $bookingPackages = [
     </div>
 </section>
 
+<!-- ==============================
+     CTA BANNER
+     Ajakan singkat sebelum footer untuk menghubungi ZGentara Trip.
+================================== -->
 <?php #CONTOH CTA FOOTER ATAS ?>
 <section class="cta-banner">
     <div class="cta-inner">
@@ -708,7 +774,16 @@ $bookingPackages = [
 </section>
 
 <script>
+/*
+|--------------------------------------------------------------------------
+| BOOKING POPUP SYSTEM
+|--------------------------------------------------------------------------
+| Script ini mengatur popup booking, mapping guide, kalender, price list,
+| validasi form, dan redirect WhatsApp tanpa mengubah HTML utama.
+|
+*/
 document.addEventListener('DOMContentLoaded', function () {
+    // Data guide dari PHP dipakai sebagai sumber utama popup booking.
     const bookingGuides = <?= json_encode($bookingGuides, JSON_UNESCAPED_UNICODE); ?>;
     const bookingPackages = <?= json_encode($bookingPackages, JSON_UNESCAPED_UNICODE); ?>;
     const assetBase = <?= json_encode($assetBase, JSON_UNESCAPED_UNICODE); ?>;
@@ -745,6 +820,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let activeStep = 1;
     let selectedDate = '';
 
+    // Helper format angka agar tanggal selalu dua digit.
     function pad(value) {
         return String(value).padStart(2, '0');
     }
@@ -775,6 +851,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // Mencari guide yang bertanggung jawab atas wisata yang dipilih user.
     function getGuideByTrip(tripName) {
         return bookingGuides.find(function (guide) {
             return guide.trips.includes(tripName);
@@ -787,6 +864,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }) || bookingPackages[0];
     }
 
+    // Mengatur perpindahan langkah pada form booking multi-step.
     function showStep(stepNumber) {
         activeStep = stepNumber;
         steps.forEach(function (step) {
@@ -801,6 +879,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    // Membuka popup booking dan mengunci konteks wisata yang dipilih.
     function openBookingModal(tripName, imageUrl) {
         bookingModal.classList.add('active');
         bookingModal.setAttribute('aria-hidden', 'false');
@@ -812,12 +891,14 @@ document.addEventListener('DOMContentLoaded', function () {
         showStep(1);
     }
 
+    // Menutup popup booking serta mengembalikan scroll halaman.
     function closeBookingModal() {
         bookingModal.classList.remove('active');
         bookingModal.setAttribute('aria-hidden', 'true');
         document.body.classList.remove('booking-modal-open');
     }
 
+    // Validasi field wajib sebelum user lanjut ke tahap berikutnya.
     function validateStep(stepNumber) {
         const currentStep = document.querySelector('.booking-step[data-step="' + stepNumber + '"]');
         const fields = Array.from(currentStep.querySelectorAll('input, select, textarea'));
@@ -862,6 +943,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    // Menyesuaikan guide, foto, dan nomor WhatsApp berdasarkan wisata.
     function updateGuideOptions(imageOverride) {
         const selectedTrip = tripSelect.value;
         const selectedGuide = getGuideByTrip(selectedTrip);
@@ -888,6 +970,7 @@ document.addEventListener('DOMContentLoaded', function () {
         renderCalendar();
     }
 
+    // Menyiapkan opsi bulan dan tahun untuk kalender booking.
     function buildMonthYearOptions() {
         const currentMonth = today.getMonth();
         const currentYear = today.getFullYear();
@@ -909,6 +992,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    // Merender kalender booking beserta status tanggal tersedia atau penuh.
     function renderCalendar() {
         const year = Number(yearSelect.value || today.getFullYear());
         const month = Number(monthSelect.value || today.getMonth());
@@ -971,6 +1055,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    // Membuat ringkasan booking dan URL WhatsApp guide tujuan.
     function renderSummary() {
         const selectedGuide = getSelectedGuide();
         const selectedPackage = getSelectedPackage();
@@ -1104,6 +1189,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    // Form saran dan kritik diarahkan ke WhatsApp admin.
     const saranForm = document.getElementById('saranForm');
     if (saranForm) {
         saranForm.addEventListener('submit', function (event) {

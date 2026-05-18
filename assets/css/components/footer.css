@@ -1,4 +1,13 @@
+/* ========================================
+   FOOTER WEBSITE
+   Styling footer utama, logo footer, menu ringkas,
+   kontak, copyright, dan legal links.
+======================================== */
 /* #CONTOH FOOTER STYLE */
+/* ========================================
+   SHARED FOOTER WIDTH WRAPPER
+   Wrapper reusable untuk menjaga lebar footer, CTA, dan copyright konsisten.
+======================================== */
 .section-shell,
 .cta-inner,
 .footer-container,
@@ -7,7 +16,11 @@
     margin: 0 auto;
 }
 
-/* #CONTOH FOOTER STYLE */
+/* ========================================
+   FOOTER COMPONENT
+   Mengatur layout footer, logo, menu, kontak, alamat, copyright, dan link legal.
+======================================== */
+/* #CONTOH FOOTER MAIN STYLE */
 
 .site-footer {
     padding: 46px 20px 24px;
@@ -15,6 +28,10 @@
     color: rgba(255, 255, 255, 0.74);
 }
 
+/* ========================================
+   FOOTER COMPONENT
+   Mengatur layout footer, logo, menu, kontak, alamat, copyright, dan link legal.
+======================================== */
 .footer-container {
     display: grid;
     grid-template-columns: 1.6fr 0.8fr 1.2fr;
@@ -22,6 +39,10 @@
     margin-bottom: 32px;
 }
 
+/* ========================================
+   FOOTER BRAND TITLE
+   Mengatur logo dan teks brand footer agar sejajar dan tetap premium.
+======================================== */
 .footer-brand-col h3 {
     margin-bottom: 14px;
     display: flex;
@@ -32,6 +53,10 @@
     letter-spacing: 0.06em;
 }
 
+/* ========================================
+   FOOTER LOGO GROUP
+   Mengatur dua logo footer agar berdampingan dengan jarak proporsional.
+======================================== */
 .footer-brand-logos {
     display: inline-flex;
     align-items: center;
@@ -39,6 +64,10 @@
     flex: 0 0 auto;
 }
 
+/* ========================================
+   FOOTER LOGO IMAGE
+   Menjaga logo footer tetap tajam, proporsional, dan tidak stretch.
+======================================== */
 .footer-logo-img {
     width: auto;
     height: 38px;
@@ -46,16 +75,28 @@
     filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.16));
 }
 
+/* ========================================
+   FOOTER BONDOWOSO LOGO
+   Penyesuaian ukuran lambang Bondowoso agar seimbang dengan logo utama.
+======================================== */
 .footer-logo-bondowoso {
     height: 36px;
 }
 
+/* ========================================
+   FOOTER TEXT SIZE
+   Mengatur ukuran teks brand, menu, dan kontak agar ringan dibaca.
+======================================== */
 .footer-brand-col p,
 .footer-col li,
 .contact-col p {
     font-size: 0.86rem;
 }
 
+/* ========================================
+   FOOTER COMPONENT
+   Mengatur layout footer, logo, menu, kontak, alamat, copyright, dan link legal.
+======================================== */
 .footer-col h4 {
     margin-bottom: 14px;
     color: var(--white);
@@ -63,32 +104,56 @@
     letter-spacing: 0.06em;
 }
 
+/* ========================================
+   FOOTER COMPONENT
+   Mengatur layout footer, logo, menu, kontak, alamat, copyright, dan link legal.
+======================================== */
 .footer-col ul {
     list-style: none;
 }
 
+/* ========================================
+   FOOTER COMPONENT
+   Mengatur layout footer, logo, menu, kontak, alamat, copyright, dan link legal.
+======================================== */
 .footer-col li,
 .contact-col p {
     margin-bottom: 8px;
 }
 
+/* ========================================
+   FOOTER COMPONENT
+   Mengatur layout footer, logo, menu, kontak, alamat, copyright, dan link legal.
+======================================== */
 .contact-address {
     display: flex;
     align-items: flex-start;
     gap: 8px;
 }
 
+/* ========================================
+   FOOTER COMPONENT
+   Mengatur layout footer, logo, menu, kontak, alamat, copyright, dan link legal.
+======================================== */
 .footer-col a,
 .legal-links a {
     color: rgba(255, 255, 255, 0.74);
     transition: color 0.25s ease;
 }
 
+/* ========================================
+   HOVER EFFECT
+   Memberikan feedback interaktif saat user mengarahkan cursor tanpa mengubah layout.
+======================================== */
 .footer-col a:hover,
 .legal-links a:hover {
     color: var(--gold);
 }
 
+/* ========================================
+   FOOTER COMPONENT
+   Mengatur layout footer, logo, menu, kontak, alamat, copyright, dan link legal.
+======================================== */
 .footer-copyright {
     padding-top: 18px;
     display: flex;
@@ -99,24 +164,44 @@
     font-size: 0.8rem;
 }
 
+/* ========================================
+   FOOTER COMPONENT
+   Mengatur layout footer, logo, menu, kontak, alamat, copyright, dan link legal.
+======================================== */
 .site-footer {
     padding: 40px 20px 22px;
 }
 
+/* ========================================
+   FOOTER COMPONENT
+   Mengatur layout footer, logo, menu, kontak, alamat, copyright, dan link legal.
+======================================== */
 .footer-container {
     gap: 26px;
     margin-bottom: 26px;
 }
 
+/* ========================================
+   FOOTER COMPONENT
+   Mengatur layout footer, logo, menu, kontak, alamat, copyright, dan link legal.
+======================================== */
 .site-footer .footer-container {
     grid-template-columns: 1.6fr 0.8fr 1.2fr;
 }
 
+/* ========================================
+   FOOTER BRAND TITLE
+   Mengatur logo dan teks brand footer agar sejajar dan tetap premium.
+======================================== */
 .footer-brand-col h3 {
     margin-bottom: 10px;
     font-size: 1.15rem;
 }
 
+/* ========================================
+   FOOTER TEXT SIZE
+   Mengatur ukuran teks brand, menu, dan kontak agar ringan dibaca.
+======================================== */
 .footer-brand-col p,
 .footer-col li,
 .contact-col p,
@@ -125,10 +210,18 @@
     line-height: 1.58;
 }
 
+/* ========================================
+   FOOTER LOGO IMAGE
+   Menjaga logo footer tetap tajam, proporsional, dan tidak stretch.
+======================================== */
 .footer-logo-img {
     height: 40px;
 }
 
+/* ========================================
+   FOOTER BONDOWOSO LOGO
+   Penyesuaian ukuran lambang Bondowoso agar seimbang dengan logo utama.
+======================================== */
 .footer-logo-bondowoso {
     height: 38px;
 }

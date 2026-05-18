@@ -1,5 +1,14 @@
+/* ========================================
+   HEADER DAN NAVBAR
+   Styling logo, menu navigasi, header fixed,
+   dan tombol kontak pada bagian atas website.
+======================================== */
 /* #CONTOH NAVBAR STYLE */
 
+/* ========================================
+   MAIN HEADER BAR
+   Header fixed dengan background hijau, blur, border emas tipis, dan shadow.
+======================================== */
 .main-header {
     position: fixed;
     top: 0;
@@ -12,6 +21,10 @@
     backdrop-filter: blur(10px);
 }
 
+/* ========================================
+   HEADER / NAVBAR COMPONENT
+   Mengatur logo, menu, alignment, spacing, dan state interaktif pada bagian header.
+======================================== */
 .header-container {
     width: min(100% - 42px, var(--container));
     min-height: 86px;
@@ -22,6 +35,10 @@
     gap: 24px;
 }
 
+/* ========================================
+   HEADER / NAVBAR COMPONENT
+   Mengatur logo, menu, alignment, spacing, dan state interaktif pada bagian header.
+======================================== */
 .logo-container {
     display: flex;
     align-items: center;
@@ -29,6 +46,10 @@
     color: var(--white);
 }
 
+/* ========================================
+   HEADER / NAVBAR COMPONENT
+   Mengatur logo, menu, alignment, spacing, dan state interaktif pada bagian header.
+======================================== */
 .brand-logos {
     display: inline-flex;
     align-items: center;
@@ -36,6 +57,10 @@
     flex: 0 0 auto;
 }
 
+/* ========================================
+   HEADER / NAVBAR COMPONENT
+   Mengatur logo, menu, alignment, spacing, dan state interaktif pada bagian header.
+======================================== */
 .brand-logo-img {
     width: auto;
     height: 42px;
@@ -43,10 +68,18 @@
     filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.18));
 }
 
+/* ========================================
+   HEADER / NAVBAR COMPONENT
+   Mengatur logo, menu, alignment, spacing, dan state interaktif pada bagian header.
+======================================== */
 .brand-logo-bondowoso {
     height: 40px;
 }
 
+/* ========================================
+   HEADER / NAVBAR COMPONENT
+   Mengatur logo, menu, alignment, spacing, dan state interaktif pada bagian header.
+======================================== */
 .brand-text {
     color: var(--white);
     font-size: 1.28rem;
@@ -55,10 +88,18 @@
     white-space: nowrap;
 }
 
+/* ========================================
+   HEADER / NAVBAR COMPONENT
+   Mengatur logo, menu, alignment, spacing, dan state interaktif pada bagian header.
+======================================== */
 .navbar {
     flex: 1;
 }
 
+/* ========================================
+   HEADER / NAVBAR COMPONENT
+   Mengatur logo, menu, alignment, spacing, dan state interaktif pada bagian header.
+======================================== */
 .nav-menu {
     list-style: none;
     display: flex;
@@ -67,6 +108,10 @@
     gap: 24px;
 }
 
+/* ========================================
+   HEADER / NAVBAR COMPONENT
+   Mengatur logo, menu, alignment, spacing, dan state interaktif pada bagian header.
+======================================== */
 .nav-menu a {
     display: inline-flex;
     align-items: center;
@@ -79,20 +124,36 @@
     transition: color 0.25s ease, transform 0.25s ease;
 }
 
+/* ========================================
+   HOVER EFFECT
+   Memberikan feedback interaktif saat user mengarahkan cursor tanpa mengubah layout.
+======================================== */
 .nav-menu a:hover {
     color: var(--gold);
     transform: translateY(-1px);
 }
 
+/* ========================================
+   HEADER / NAVBAR COMPONENT
+   Mengatur logo, menu, alignment, spacing, dan state interaktif pada bagian header.
+======================================== */
 .nav-home {
     font-size: 1.1rem;
 }
 
+/* ========================================
+   HEADER / NAVBAR COMPONENT
+   Mengatur logo, menu, alignment, spacing, dan state interaktif pada bagian header.
+======================================== */
 .header-btn {
     display: flex;
     align-items: center;
 }
 
+/* ========================================
+   BUTTON / CTA COMPONENT
+   Mengatur ukuran, radius, warna, shadow, transisi, dan affordance tombol.
+======================================== */
 .btn-outline-framed {
     min-height: 42px;
     padding: 10px 18px;
@@ -110,28 +171,52 @@
     white-space: nowrap;
 }
 
+/* ========================================
+   HOVER EFFECT
+   Memberikan feedback interaktif saat user mengarahkan cursor tanpa mengubah layout.
+======================================== */
 .btn-outline-framed:hover {
     border-color: var(--gold);
     background: var(--gold);
 }
 
+/* ========================================
+   HEADER / NAVBAR COMPONENT
+   Mengatur logo, menu, alignment, spacing, dan state interaktif pada bagian header.
+======================================== */
 .header-container {
     min-height: 80px;
     gap: 18px;
 }
 
+/* ========================================
+   HEADER / NAVBAR COMPONENT
+   Mengatur logo, menu, alignment, spacing, dan state interaktif pada bagian header.
+======================================== */
 .brand-logo-img {
     height: 44px;
 }
 
+/* ========================================
+   HEADER / NAVBAR COMPONENT
+   Mengatur logo, menu, alignment, spacing, dan state interaktif pada bagian header.
+======================================== */
 .brand-logo-bondowoso {
     height: 42px;
 }
 
+/* ========================================
+   HEADER / NAVBAR COMPONENT
+   Mengatur logo, menu, alignment, spacing, dan state interaktif pada bagian header.
+======================================== */
 .nav-menu {
     gap: 19px;
 }
 
+/* ========================================
+   HEADER / NAVBAR COMPONENT
+   Mengatur logo, menu, alignment, spacing, dan state interaktif pada bagian header.
+======================================== */
 .nav-menu a {
     font-size: 0.84rem;
     font-weight: 850;

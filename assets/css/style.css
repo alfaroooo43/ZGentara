@@ -1,10 +1,55 @@
-﻿@import url('./components/utilities.css');
+/* ========================================
+   MAIN CSS ENTRY
+   File ini hanya mengumpulkan seluruh CSS component
+   agar struktur styling lebih rapi dan mudah dirawat.
+======================================== */
+/* ========================================
+   CSS COMPONENT IMPORT
+   Import base variable, reset, utility class, title, dan helper layout.
+======================================== */
+@import url('./components/utilities.css');
+/* ========================================
+   CSS COMPONENT IMPORT
+   Import styling header, logo, navbar, dan tombol kontak.
+======================================== */
 @import url('./components/header.css');
+/* ========================================
+   CSS COMPONENT IMPORT
+   Import styling hero, overlay, headline, tombol CTA, dan wave.
+======================================== */
 @import url('./components/hero.css');
+/* ========================================
+   CSS COMPONENT IMPORT
+   Import styling search, filter, card destinasi, rating, dan expand list.
+======================================== */
 @import url('./components/destination.css');
+/* ========================================
+   CSS COMPONENT IMPORT
+   Import styling popup booking, form, calendar, guide preview, dan WhatsApp.
+======================================== */
 @import url('./components/booking.css');
+/* ========================================
+   CSS COMPONENT IMPORT
+   Import styling price list popup dan package card.
+======================================== */
 @import url('./components/popup.css');
+/* ========================================
+   CSS COMPONENT IMPORT
+   Import styling tentang kami, alasan memilih, dekorasi daun, dan guide card.
+======================================== */
 @import url('./components/guide.css');
+/* ========================================
+   CSS COMPONENT IMPORT
+   Import styling review pelanggan, rating, dan toggle testimoni.
+======================================== */
 @import url('./components/testimonial.css');
+/* ========================================
+   CSS COMPONENT IMPORT
+   Import styling footer, logo, menu, kontak, dan legal links.
+======================================== */
 @import url('./components/footer.css');
+/* ========================================
+   CSS COMPONENT IMPORT
+   Import semua breakpoint responsive sebagai override terakhir.
+======================================== */
 @import url('./components/responsive.css');

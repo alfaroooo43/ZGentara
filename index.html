@@ -1,9 +1,14 @@
 <!DOCTYPE html>
+<!-- ==============================
+     STATIC ENTRY POINT VERCEL
+     File statis utama yang dibaca Vercel untuk menampilkan landing page.
+================================== -->
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZGentara Trip</title>
+    <!-- Open Graph membuat preview link tampil rapi di WhatsApp dan sosial media. -->
     <meta property="og:title" content="ZGentara Trip | Jelajahi Keindahan Indonesia">
     <meta property="og:description" content="Website travel premium untuk booking wisata alam, open trip, healing, dan adventure terbaik di Indonesia bersama ZGentara Trip.">
     <meta property="og:image" content="https://zgentara.vercel.app/assets/images/BagroundHeader.png">
@@ -14,6 +19,10 @@
 </head>
 <body>
 
+<!-- ==============================
+     NAVBAR / HEADER SECTION
+     Logo, menu anchor, dan tombol hubungi kami.
+================================== -->
 <header class="main-header">
     <div class="header-container">
         <a href="#hero" class="logo-container" aria-label="ZGentara Trip">
@@ -41,8 +50,16 @@
     </div>
 </header>
 
+<!-- ==============================
+     MAIN CONTENT
+     Seluruh section landing page statis berada di dalam area ini.
+================================== -->
 <main>
 
+<!-- ==============================
+     HERO SECTION
+     Banner utama dengan headline cinematic dan tombol menuju destinasi.
+================================== -->
 <section id="hero" class="hero">
     <div class="hero-overlay"></div>
 
@@ -62,6 +79,10 @@
 </section>
 
 
+<!-- ==============================
+     FEATURE SECTION
+     Empat keunggulan utama layanan travel ZGentara Trip.
+================================== -->
 <section id="fitur" class="section-container">
     <div class="section-shell">
         <div class="section-header">
@@ -103,6 +124,10 @@
     </div>
 </section>
 
+<!-- ==============================
+     DESTINASI POPULER
+     Search realtime, filter kategori, card wisata, dan CTA booking.
+================================== -->
 <section id="jastrip" class="section-container destination-section">
     <div class="section-shell destination-filter-shell">
         <div class="section-header">
@@ -234,6 +259,10 @@
     </div>
 </section>
 
+<!-- ==============================
+     BOOKING POPUP
+     Modal booking premium dengan guide dinamis, kalender, dan WhatsApp.
+================================== -->
 <section id="booking-trip" class="booking-section" aria-hidden="true">
     <div class="booking-modal-backdrop" data-close-booking></div>
     <div class="booking-shell">
@@ -296,6 +325,10 @@
         </div>
     </div>
 </section>
+<!-- ==============================
+     MENGAPA MEMILIH KAMI
+     Benefit utama yang menjelaskan alasan memilih ZGentara Trip.
+================================== -->
 <section class="why-section">
     <img src="assets/icons/daun.png" alt="" class="decor-leaf decor-leaf-left" aria-hidden="true">
     <img src="assets/icons/daun.png" alt="" class="decor-leaf decor-leaf-right" aria-hidden="true">
@@ -346,6 +379,10 @@
     </div>
 </section>
 
+<!-- ==============================
+     TENTANG KAMI DAN GUIDE
+     Profil singkat brand dan guide perjalanan.
+================================== -->
 <section id="tentang" class="section-container about-section">
     <div class="section-shell">
         <div class="section-header">
@@ -395,6 +432,10 @@
     </div>
 </section>
 
+<!-- ==============================
+     TESTIMONI PELANGGAN
+     Review pelanggan dan toggle lihat semua testimoni.
+================================== -->
 <section id="testimoni" class="section-container testimonial-section">
     <div class="section-shell">
         <div class="section-header">
@@ -676,6 +717,10 @@
             </div>
 </section>
 
+<!-- ==============================
+     FORM SARAN DAN KRITIK
+     Feedback pengunjung yang dikirim ke WhatsApp admin.
+================================== -->
 <section id="saran" class="section-container form-section">
     <div class="section-shell">
         <div class="section-header">
@@ -696,6 +741,10 @@
     </div>
 </section>
 
+<!-- ==============================
+     CTA BANNER
+     Ajakan akhir sebelum footer.
+================================== -->
 <section class="cta-banner">
     <div class="cta-inner">
         <div class="cta-text">
@@ -712,6 +761,10 @@
 
 </main>
 
+<!-- ==============================
+     FOOTER WEBSITE
+     Identitas brand, menu ringkas, kontak, dan legal links.
+================================== -->
 <footer class="site-footer">
     <div class="footer-container">
         <div class="footer-brand-col">
@@ -754,7 +807,16 @@
 </footer>
 
 <script>
+/*
+|--------------------------------------------------------------------------
+| WEBSITE INTERACTION SYSTEM
+|--------------------------------------------------------------------------
+| Script ini mengatur search destinasi, popup booking, guide dinamis,
+| kalender booking, WhatsApp booking, dan form saran.
+|
+*/
 document.addEventListener('DOMContentLoaded', function () {
+    // Mapping guide, wisata, nomor WhatsApp, foto, dan tanggal booked.
     const guides = {
         'Kawah Ijen': {
             name: 'ALFARO',
@@ -900,6 +962,7 @@ document.addEventListener('DOMContentLoaded', function () {
         return guides[selectedTrip] || guides['Kawah Ijen'];
     }
 
+    // Normalisasi teks agar search destinasi tidak sensitif huruf besar/kecil.
     function normalizeText(value) {
         return (value || '').toLowerCase().trim();
     }
@@ -922,6 +985,7 @@ document.addEventListener('DOMContentLoaded', function () {
         return true;
     }
 
+    // Filter card destinasi berdasarkan search input dan kategori aktif.
     function filterDestinations() {
         const query = normalizeText(searchInput ? searchInput.value : '');
         const category = activeCategory();
@@ -946,6 +1010,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    // Update preview guide dan wisata ketika user membuka booking.
     function updateGuidePreview(imageOverride) {
         const guide = currentGuide();
         tripTitle.textContent = selectedTrip;
@@ -958,6 +1023,7 @@ document.addEventListener('DOMContentLoaded', function () {
         guidePhone.textContent = 'WA: ' + guide.phone;
     }
 
+    // Render kalender booking lengkap dengan tanggal lalu, tersedia, dan booked.
     function renderCalendar() {
         const guide = currentGuide();
         const year = visibleMonth.getFullYear();
@@ -1037,6 +1103,7 @@ document.addEventListener('DOMContentLoaded', function () {
         nextMonth.disabled = monthDiff(baseMonth, visibleMonth) >= 2;
     }
 
+    // Membuka modal booking dari card wisata yang dipilih.
     function openBooking(tripName, imageUrl) {
         selectedTrip = tripName || 'Kawah Ijen';
         selectedDate = '';
@@ -1051,6 +1118,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.body.classList.add('booking-modal-open');
     }
 
+    // Menutup modal booking dan membersihkan hash URL jika diperlukan.
     function closeBooking() {
         bookingModal.classList.remove('active');
         bookingModal.setAttribute('aria-hidden', 'true');
@@ -1078,6 +1146,7 @@ document.addEventListener('DOMContentLoaded', function () {
         button.addEventListener('click', closeBooking);
     });
 
+    // Search destinasi bekerja realtime dan tetap menjaga kategori aktif.
     if (searchForm && searchInput) {
         const urlSearch = new URLSearchParams(window.location.search).get('search');
         if (urlSearch) {
@@ -1117,6 +1186,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+    // Submit booking membuat pesan WhatsApp sesuai guide tujuan.
     bookingForm.addEventListener('submit', function (event) {
         event.preventDefault();
 
@@ -1171,6 +1241,7 @@ document.addEventListener('DOMContentLoaded', function () {
         window.open('https://wa.me/' + guide.phone + '?text=' + encodeURIComponent(message), '_blank', 'noopener');
     });
 
+    // Submit saran dan kritik membuat pesan WhatsApp untuk admin.
     if (saranForm) {
         saranForm.addEventListener('submit', function (event) {
             event.preventDefault();

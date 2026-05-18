@@ -1,5 +1,14 @@
+/* ========================================
+   UTILITIES DAN BASE STYLE
+   Berisi variable warna, reset dasar, container,
+   title section, tombol umum, dan helper reusable.
+======================================== */
 /* #CONTOH UTILITIES STYLE */
-﻿:root {
+/* ========================================
+   ROOT DESIGN VARIABLES
+   Token warna, shadow, radius, dan ukuran container untuk seluruh website.
+======================================== */
+:root {
     --green-dark: #06462d;
     --green: #0f6b45;
     --green-soft: #eaf3ee;
@@ -15,18 +24,30 @@
     --container: 1180px;
 }
 
+/* ========================================
+   BASE HTML BEHAVIOR
+   Mengatur smooth scroll global untuk anchor menu dan CTA.
+======================================== */
 /* #CONTOH BASE STYLE */
 
 html {
     scroll-behavior: smooth;
 }
 
+/* ========================================
+   BASE RESET
+   Reset dan fondasi global agar tampilan konsisten di semua browser.
+======================================== */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/* ========================================
+   BASE RESET
+   Reset dan fondasi global agar tampilan konsisten di semua browser.
+======================================== */
 body {
     min-width: 320px;
     overflow-x: hidden;
@@ -36,22 +57,38 @@ body {
     line-height: 1.6;
 }
 
+/* ========================================
+   BASE RESET
+   Reset dan fondasi global agar tampilan konsisten di semua browser.
+======================================== */
 img {
     display: block;
     max-width: 100%;
 }
 
+/* ========================================
+   BASE RESET
+   Reset dan fondasi global agar tampilan konsisten di semua browser.
+======================================== */
 a {
     color: inherit;
     text-decoration: none;
 }
 
+/* ========================================
+   BASE RESET
+   Reset dan fondasi global agar tampilan konsisten di semua browser.
+======================================== */
 button,
 input,
 textarea {
     font: inherit;
 }
 
+/* ========================================
+   HEADER / NAVBAR COMPONENT
+   Mengatur logo, menu, alignment, spacing, dan state interaktif pada bagian header.
+======================================== */
 /* #CONTOH SECTION STYLE */
 
 .section-header {
@@ -60,6 +97,10 @@ textarea {
     text-align: center;
 }
 
+/* ========================================
+   CSS COMPONENT DETAIL
+   Mengatur selector .title-line agar tampilan website tetap konsisten.
+======================================== */
 .title-line {
     position: relative;
     display: inline-flex;
@@ -74,6 +115,10 @@ textarea {
     letter-spacing: 0.02em;
 }
 
+/* ========================================
+   PSEUDO ELEMENT DECORATION
+   Elemen dekoratif tambahan yang dibuat lewat CSS tanpa menambah markup HTML.
+======================================== */
 .title-line::before,
 .title-line::after {
     content: "";
@@ -83,6 +128,10 @@ textarea {
     background: rgba(6, 70, 45, 0.36);
 }
 
+/* ========================================
+   CSS COMPONENT DETAIL
+   Mengatur selector .subtitle agar tampilan website tetap konsisten.
+======================================== */
 .subtitle {
     max-width: 520px;
     margin: 12px auto 0;
@@ -90,6 +139,10 @@ textarea {
     font-size: 0.93rem;
 }
 
+/* ========================================
+   CARD / SHADOW COMPONENT
+   Mengatur card, radius, border, shadow, dan visual depth agar tampilan premium.
+======================================== */
 .feature-card {
     min-height: 162px;
     padding: 28px 22px;
@@ -101,11 +154,19 @@ textarea {
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+/* ========================================
+   HOVER EFFECT
+   Memberikan feedback interaktif saat user mengarahkan cursor tanpa mengubah layout.
+======================================== */
 .feature-card:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow);
 }
 
+/* ========================================
+   CSS COMPONENT DETAIL
+   Mengatur selector .circle-icon, .avatar, .headphone agar tampilan website tetap konsisten.
+======================================== */
 .circle-icon,
 .avatar,
 .headphone {
@@ -115,6 +176,10 @@ textarea {
     border-radius: 50%;
 }
 
+/* ========================================
+   CSS COMPONENT DETAIL
+   Mengatur selector .feature-icon-circle agar tampilan website tetap konsisten.
+======================================== */
 .feature-icon-circle {
     width: 92px;
     height: 92px;
@@ -129,6 +194,10 @@ textarea {
     overflow: hidden;
 }
 
+/* ========================================
+   CSS COMPONENT DETAIL
+   Mengatur selector .feature-icon-img agar tampilan website tetap konsisten.
+======================================== */
 .feature-icon-img {
     width: 56px;
     height: 56px;
@@ -139,12 +208,20 @@ textarea {
     transform-origin: center;
 }
 
+/* ========================================
+   CARD / SHADOW COMPONENT
+   Mengatur card, radius, border, shadow, dan visual depth agar tampilan premium.
+======================================== */
 .feature-card h4 {
     margin-bottom: 8px;
     font-size: 0.92rem;
     font-weight: 850;
 }
 
+/* ========================================
+   HEADER / NAVBAR COMPONENT
+   Mengatur logo, menu, alignment, spacing, dan state interaktif pada bagian header.
+======================================== */
 /* #CONTOH RESTORE PREMIUM LAYOUT */
 
 .brand-text {
@@ -152,45 +229,81 @@ textarea {
     font-weight: 900;
 }
 
+/* ========================================
+   BUTTON / CTA COMPONENT
+   Mengatur ukuran, radius, warna, shadow, transisi, dan affordance tombol.
+======================================== */
 .btn-outline-framed {
     min-height: 42px;
     padding: 10px 19px;
     box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
 }
 
+/* ========================================
+   HEADER / NAVBAR COMPONENT
+   Mengatur logo, menu, alignment, spacing, dan state interaktif pada bagian header.
+======================================== */
 .section-header {
     margin-bottom: 28px;
 }
 
+/* ========================================
+   CSS COMPONENT DETAIL
+   Mengatur selector .title-line agar tampilan website tetap konsisten.
+======================================== */
 .title-line {
     font-size: clamp(1.58rem, 2.25vw, 2rem);
     line-height: 1.14;
 }
 
+/* ========================================
+   CSS COMPONENT DETAIL
+   Mengatur selector .subtitle agar tampilan website tetap konsisten.
+======================================== */
 .subtitle {
     margin-top: 10px;
     font-size: 0.96rem;
     line-height: 1.55;
 }
 
+/* ========================================
+   CARD / SHADOW COMPONENT
+   Mengatur card, radius, border, shadow, dan visual depth agar tampilan premium.
+======================================== */
 .feature-card {
     min-height: 154px;
     padding: 24px 20px;
 }
 
+/* ========================================
+   CARD / SHADOW COMPONENT
+   Mengatur card, radius, border, shadow, dan visual depth agar tampilan premium.
+======================================== */
 .card-content {
     padding: 20px;
 }
 
+/* ========================================
+   CARD / SHADOW COMPONENT
+   Mengatur card, radius, border, shadow, dan visual depth agar tampilan premium.
+======================================== */
 .card-content h3 {
     font-size: 1.15rem;
     font-weight: 900;
 }
 
+/* ========================================
+   CENTERED ACTION WRAPPER
+   Area tombol tengah seperti lihat semua destinasi atau testimoni.
+======================================== */
 .action-center {
     margin-top: 24px;
 }
 
+/* ========================================
+   BUTTON / CTA COMPONENT
+   Mengatur ukuran, radius, warna, shadow, transisi, dan affordance tombol.
+======================================== */
 .btn-primary-green,
 .btn-white,
 .btn-gold-cta {
@@ -200,25 +313,45 @@ textarea {
     box-shadow: 0 14px 30px rgba(7, 79, 51, 0.18);
 }
 
+/* ========================================
+   CSS COMPONENT DETAIL
+   Mengatur selector .promo-banner agar tampilan website tetap konsisten.
+======================================== */
 .promo-banner {
     min-height: 250px;
     padding: 40px 50px;
     gap: 28px;
 }
 
+/* ========================================
+   CSS COMPONENT DETAIL
+   Mengatur selector .promo-info h2 agar tampilan website tetap konsisten.
+======================================== */
 .promo-info h2 {
     font-size: clamp(1.95rem, 3vw, 2.75rem);
 }
 
+/* ========================================
+   TESTIMONIAL COMPONENT
+   Mengatur card review, rating bintang, avatar, toggle lihat semua, dan animasi testimoni.
+======================================== */
 .quote {
     min-height: 76px;
     margin-bottom: 12px;
 }
 
+/* ========================================
+   BUTTON / CTA COMPONENT
+   Mengatur ukuran, radius, warna, shadow, transisi, dan affordance tombol.
+======================================== */
 .cta-banner {
     padding-bottom: 28px;
 }
 
+/* ========================================
+   BUTTON / CTA COMPONENT
+   Mengatur ukuran, radius, warna, shadow, transisi, dan affordance tombol.
+======================================== */
 .cta-inner {
     padding: 20px 26px;
 }

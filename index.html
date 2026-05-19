@@ -224,7 +224,7 @@
                     <span class="vibe-tag">Golden Hour Spot</span>
                     <h3>Kawah Ijen</h3>
                     <p>Pesona kawah biru dan golden hour yang selalu jadi favorit wisatawan.</p>
-                    <div class="card-bottom"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="rating-num">4.9</span><a href="#booking-trip" class="card-booking-chip booking-trip-trigger" data-trip="Kawah Ijen" data-image="assets/images/BlueFireIjenBondowoso.png">Booking</a></div>
+                    <div class="card-bottom"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="rating-num">4.9</span><a href="#booking-trip" class="card-booking-chip booking-trip-trigger" data-trip="Kawah Ijen" data-image="assets/images/BagroundHeader.png">Booking</a></div>
                 </div>
             </article>
             <article class="card trip-card vibe-golden">
@@ -234,15 +234,6 @@
                     <h3>Bukit Megasari</h3>
                     <p>Spot sore hari dengan lanskap luas yang terasa dramatis.</p>
                     <div class="card-bottom"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="rating-num">4.9</span><a href="#booking-trip" class="card-booking-chip booking-trip-trigger" data-trip="Bukit Megasari" data-image="assets/images/BukitMegasariParalayang.png">Booking</a></div>
-                </div>
-            </article>
-            <article class="card trip-card vibe-golden">
-                <div class="card-img"><img src="assets/images/BatuSo'onBondowoso.png" alt="Batu So'on Bondowoso"></div>
-                <div class="card-content">
-                    <span class="vibe-tag">Golden Hour Spot</span>
-                    <h3>Batu So'on</h3>
-                    <p>Formasi batu unik dengan cahaya sore yang cantik untuk dokumentasi.</p>
-                    <div class="card-bottom"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="rating-num">4.9</span><a href="#booking-trip" class="card-booking-chip booking-trip-trigger" data-trip="Batu So'on" data-image="assets/images/BatuSo'onBondowoso.png">Booking</a></div>
                 </div>
             </article>
         </div>
@@ -276,7 +267,7 @@
 
             <div class="booking-selected-card">
                 <div class="booking-selected-image">
-                    <img src="assets/images/BlueFireIjenBondowoso.png" alt="Wisata dipilih" id="bookingTripImage">
+                    <img src="assets/images/BagroundHeader.png" alt="Wisata dipilih" id="bookingTripImage">
                 </div>
                 <div class="booking-selected-info">
                     <span>Wisata dipilih</span>
@@ -298,7 +289,7 @@
                     <div class="booking-field"><label for="bookingName">Nama Lengkap</label><input type="text" id="bookingName" name="nama" autocomplete="name" required></div>
                     <div class="booking-field"><label for="bookingCity">Domisili</label><select id="bookingCity" name="domisili" required><option value="">Pilih Domisili</option><option>Bangkalan</option><option>Banyuwangi</option><option>Batu</option><option>Blitar</option><option>Bojonegoro</option><option>Bondowoso</option><option>Gresik</option><option>Jember</option><option>Jombang</option><option>Kediri</option><option>Kota Blitar</option><option>Kota Kediri</option><option>Kota Madiun</option><option>Kota Malang</option><option>Kota Mojokerto</option><option>Kota Pasuruan</option><option>Kota Probolinggo</option><option>Lamongan</option><option>Lumajang</option><option>Madiun</option><option>Magetan</option><option>Malang</option><option>Mojokerto</option><option>Nganjuk</option><option>Ngawi</option><option>Pacitan</option><option>Pamekasan</option><option>Pasuruan</option><option>Ponorogo</option><option>Probolinggo</option><option>Sampang</option><option>Sidoarjo</option><option>Situbondo</option><option>Sumenep</option><option>Surabaya</option><option>Trenggalek</option><option>Tuban</option><option>Tulungagung</option><option>Luar Jawa Timur</option></select></div>
                     <div class="booking-field"><label for="bookingWhatsapp">Nomor WhatsApp</label><input type="tel" id="bookingWhatsapp" name="whatsapp" placeholder="08xxxxxxxxxx" required></div>
-                    <div class="booking-field booking-field-full"><label for="bookingAddress">Alamat</label><textarea id="bookingAddress" name="alamat" rows="3" required></textarea></div>
+                    <div class="booking-field booking-field-full"><label for="bookingAddress">Alamat Titik Jemput</label><textarea id="bookingAddress" name="alamat" rows="3" required></textarea></div>
                 </div>
 
                 <div class="booking-step active booking-form-grid">
@@ -823,7 +814,7 @@ document.addEventListener('DOMContentLoaded', function () {
             role: 'Mountain Guide',
             phone: '6287781896510',
             photo: 'assets/images/foto1.png',
-            image: 'assets/images/BlueFireIjenBondowoso.png',
+            image: 'assets/images/BagroundHeader.png',
             bookedDates: ['2026-05-19', '2026-05-23', '2026-05-30', '2026-06-07', '2026-06-14', '2026-07-05']
         },
         'Blue Fire Ijen': {
@@ -897,14 +888,6 @@ document.addEventListener('DOMContentLoaded', function () {
             photo: 'assets/images/foto5.png',
             image: 'assets/images/BukitMegasariParalayang.png',
             bookedDates: ['2026-05-31', '2026-06-06', '2026-06-20', '2026-07-04']
-        },
-        "Batu So'on": {
-            name: 'REGITA',
-            role: 'Photo Spot Guide',
-            phone: '6285731348852',
-            photo: 'assets/images/foto5.png',
-            image: "assets/images/BatuSo'onBondowoso.png",
-            bookedDates: ['2026-05-25', '2026-06-10', '2026-06-21', '2026-07-15']
         }
     };
 
@@ -1206,6 +1189,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const city = document.getElementById('bookingCity').value;
         const whatsapp = document.getElementById('bookingWhatsapp').value.trim();
         const address = document.getElementById('bookingAddress').value.trim();
+        const note = document.getElementById('bookingNote').value.trim();
         const packageName = document.getElementById('bookingPackage').value;
         const message = [
             'Halo Guide ' + guide.name,
@@ -1231,6 +1215,9 @@ document.addEventListener('DOMContentLoaded', function () {
             '',
             'Tanggal Booking:',
             formatDate(selectedDate),
+            '',
+            'Catatan:',
+            note || '-',
             '',
             'Mohon informasi lebih lanjut \uD83D\uDE4C'
         ].join('\n');

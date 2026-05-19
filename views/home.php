@@ -159,7 +159,7 @@ $destinationImageMap = [
     'Bukit Teletubbies' => 'BukitTeletubbies.png',
     'Air Terjun Tancak Kembar' => 'AirTerjunTancakKembar.png',
     'Niagara Mini' => 'NiagaraMiniBondowoso.png',
-    'Kawah Ijen' => 'BlueFireIjenBondowoso.png',
+    'Kawah Ijen' => 'BagroundHeader.png',
     'Blue Fire Ijen' => 'BlueFireIjenBondowoso.png',
     'Bukit Megasari' => 'BukitMegasariParalayang.png'
 ];
@@ -414,7 +414,7 @@ $bookingPackages = [
 
             <div class="booking-selected-card">
                 <div class="booking-selected-image">
-                    <img src="<?= htmlspecialchars($assetBase); ?>/images/BlueFireIjenBondowoso.png" alt="Wisata dipilih" id="bookingTripImage">
+                    <img src="<?= htmlspecialchars($assetBase); ?>/images/BagroundHeader.png" alt="Wisata dipilih" id="bookingTripImage">
                 </div>
                 <div class="booking-selected-info">
                     <span>Wisata dipilih</span>
@@ -487,7 +487,7 @@ $bookingPackages = [
                         </select>
                     </div>
                     <div class="booking-field">
-                        <label for="bookingAddress">Alamat</label>
+                        <label for="bookingAddress">Alamat Titik Jemput</label>
                         <textarea id="bookingAddress" name="alamat" rows="4" required></textarea>
                     </div>
                     <div class="booking-field">
@@ -501,7 +501,7 @@ $bookingPackages = [
                     <h3>Detail Event</h3>
                     <div class="booking-field">
                         <label for="bookingTrip">Wisata Terkunci</label>
-                        <input type="text" id="bookingTrip" name="wisata" value="Kawah Ijen" data-image="<?= htmlspecialchars($assetBase); ?>/images/BlueFireIjenBondowoso.png" readonly required>
+                        <input type="text" id="bookingTrip" name="wisata" value="Kawah Ijen" data-image="<?= htmlspecialchars($assetBase); ?>/images/BagroundHeader.png" readonly required>
                     </div>
                     <div class="booking-field">
                         <label for="bookingGuide">Guide Otomatis</label>
@@ -1059,6 +1059,7 @@ document.addEventListener('DOMContentLoaded', function () {
             alamat: document.getElementById('bookingAddress').value.trim(),
             whatsapp: document.getElementById('bookingWhatsapp').value.trim(),
             wisata: tripSelect.value,
+            catatan: document.getElementById('bookingNote') ? document.getElementById('bookingNote').value.trim() : '-',
             guide: selectedGuide ? selectedGuide.name + ' - ' + selectedGuide.role : '-',
             paket: selectedPackage.name,
             tanggal: formatDateId(selectedDate),
@@ -1100,6 +1101,7 @@ document.addEventListener('DOMContentLoaded', function () {
             '- Wisata: ' + values.wisata,
             '- Paket: ' + values.paket,
             '- Tanggal Booking: ' + values.tanggal,
+            '- Catatan: ' + (values.catatan || '-'),
             '',
             'Mohon informasi lebih lanjut 🙌'
         ].join('\n');
